@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -129,48 +128,38 @@
                   <ul class="dropdown-menu">
                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="javaScript:void(0)">Desa</a>
                       <ul class="dropdown-menu">
-                        <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/profil/visi-misi">Visi Misi</a></li>
-                        <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/profil/sejarah-sekolah">Sejarah</a></li>
-                        <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/profil/kepala-sekolah">Kepala Desa</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="">Visi Misi</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="">Sejarah</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="">Kepala Desa</a></li>
                     </ul>
                   </li>
                     <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="javaScript:void(0)">RW</a>
                       <ul class="dropdown-menu">
-                                                <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/profil/jurusan/detail/teknik-bisnis-sepeda-motor">RW 1  </a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/profil/jurusan/detail/akomodasi-perhotelan">RW 2 </a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/profil/jurusan/detail/teknik-kendaraan-ringan-otomotif">RW 3  </a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/profil/jurusan/detail/akutansi-keuangan-dan-lembaga">RW 4  </a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="">RW 1  </a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="">RW 2 </a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="">RW 3  </a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="">RW 4  </a></li>
                                               </ul>
                   </ul>
                 </li>
 
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javaScript:void(0)">Berita</a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/berita/berita-sekolah">Berita Sekolah</a></li>
-                    <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/berita/berita-sekolah/berita/pengumuman">Pengumuman</a></li>
+                    <li class="nav-item"><a class="dropdown-item" href="">Berita Desa</a></li>
+                    <li class="nav-item"><a class="dropdown-item" href="">Pengumuman</a></li>
                     <!--<li class="nav-item"><a class="dropdown-item" href="http://bkk-alumni-smkn1depok.000webhostapp.com">Informasi BKK</a></li>-->
                   </ul>
                 </li>
 
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javaScript:void(0)">GTK</a>
+                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javaScript:void(0)">Lembaga</a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/gtk/guru">Guru</a></li>
-                    <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/gtk/tenaga-kependidikan">Tenaga Kependidikan</a></li>
+                    <li class="nav-item"><a class="dropdown-item" href="">PKK</a></li>
+                    <li class="nav-item"><a class="dropdown-item" href="">Karang Taruna</a></li>
                   </ul>
                 </li>
 
-
-                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javaScript:void(0)">Siswa</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/siswa/data-siswa">Data Siswa</a></li>
-                    <li class="nav-item"><a class="dropdown-item" href="https://www.smkn1depok.sch.id/siswa/organisasi-ekskul">Organisasi & Ekskul</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav-item"><a class="nav-link" href="https://www.smkn1depok.sch.id/data-alumni">Alumni</a></li>
-                <!--<li class="nav-item"><a class="nav-link" href="https://lsp-smkn1depok.000webhostapp.com/">LSP</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="https://www.smkn1depok.sch.id/galeri">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.smkn1depok.sch.id/dudika">Dudika</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Pemerintahan Desa</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Galeri</a></li>
 
               </ul>
               <!-- /.navbar-nav -->
@@ -179,7 +168,7 @@
             <div class="navbar-other w-90 d-flex ms-auto">
               <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
                 <li class="nav-item d-none d-md-block">
-                  <a href="https://www.smkn1depok.sch.id/kontak" class="btn btn-sm btn-orange rounded-pill">Contact</a>
+                  <a href="" class="btn btn-sm btn-orange rounded-pill">Login</a>
                 </li>
                 <li class="nav-item d-lg-none">
                   <div class="navbar-hamburger"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
@@ -239,7 +228,7 @@
         <div class="row">
           <div class="col-lg-9 col-xl-8 col-xxl-7">
             <h2 class="fs-16 text-uppercase text-line text-primary mb-3">Berita</h2>
-            <a href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah"><h3 class="display-4 mb-9">Berita Terbaru SMKN 1 Depok</h3></a>
+            <a href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah"><h3 class="display-4 mb-9">Berita Terbaru Desa Sindangjawa</h3></a>
           </div>
         </div>
           <div class="carousel owl-carousel blog grid-view mb-10" data-margin="30" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
