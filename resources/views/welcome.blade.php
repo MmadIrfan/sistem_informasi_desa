@@ -168,7 +168,7 @@
             <div class="navbar-other w-90 d-flex ms-auto">
               <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
                 <li class="nav-item d-none d-md-block">
-                  <a href="" class="btn btn-sm btn-orange rounded-pill">Login</a>
+                  <a href="/login" class="btn btn-sm btn-orange rounded-pill">Login</a>
                 </li>
                 <li class="nav-item d-lg-none">
                   <div class="navbar-hamburger"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
