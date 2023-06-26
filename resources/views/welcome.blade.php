@@ -14,9 +14,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Desa Sindangjawa" name="keywords">
-    <meta content="SMK Negeri 1 Depok adalah sebuah Sekolah Menengah Kejuruan (SMK) Negeri pertama di Kota Depok yang menggabungkan antara beberapa kelompok Kejuruan." name="description">
+    <meta content="Sindangjawa adalah desa di kecamatan Dukupuntang, Cirebon, Jawa Barat, Indonesia." name="description">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHB1CQJRHH&amp;l=dataLayer&amp;cx=c"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143782567-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -147,7 +149,6 @@
                   <ul class="dropdown-menu">
                     <li class="nav-item"><a class="dropdown-item" href="">Berita Desa</a></li>
                     <li class="nav-item"><a class="dropdown-item" href="">Pengumuman</a></li>
-                    <!--<li class="nav-item"><a class="dropdown-item" href="http://bkk-alumni-smkn1depok.000webhostapp.com">Informasi BKK</a></li>-->
                   </ul>
                 </li>
 
@@ -486,7 +487,7 @@
     <div class="row align-items-center mb-7">
       <div class="col-md-8 col-lg-8 col-xl-7 col-xxl-6 pe-lg-17">
         <a href="https://www.smkn1depok.sch.id/galeri"><h2 class="display-4 mb-3">Dokumentasi</h2></a>
-        <p class="lead fs-lg">Dokumentasi Kegiatan di SMKN 1 Depok</p>
+        <p class="lead fs-lg">Dokumentasi Tentang Sindangjawa</p>
       </div>
       <!--/column -->
     </div>
@@ -835,57 +836,6 @@ loadID(getIndexex);
     });
   }
 })();
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   var lazyloadImages;    
-
-//   if ("IntersectionObserver" in window) {
-//     lazyloadImages = document.querySelectorAll(".lazy");
-//     var imageObserver = new IntersectionObserver(function(entries, observer) {
-//       entries.forEach(function(entry) {
-//         if (entry.isIntersecting) {
-//           var image = entry.target;
-//           image.src = image.dataset.src;
-//           image.classList.remove("lazy");
-//           imageObserver.unobserve(image);
-//         }
-//       });
-//     });
-
-//     lazyloadImages.forEach(function(image) {
-//       imageObserver.observe(image);
-//     });
-//   } else {  
-//     var lazyloadThrottleTimeout;
-//     lazyloadImages = document.querySelectorAll(".lazy");
-    
-//     function lazyload () {
-//       if(lazyloadThrottleTimeout) {
-//         clearTimeout(lazyloadThrottleTimeout);
-//       }    
-
-//       lazyloadThrottleTimeout = setTimeout(function() {
-//         var scrollTop = window.pageYOffset;
-//         lazyloadImages.forEach(function(img) {
-//             if(img.offsetTop < (window.innerHeight + scrollTop)) {
-//               img.src = img.dataset.src;
-//               img.classList.remove('lazy');
-//             }
-//         });
-//         if(lazyloadImages.length == 0) { 
-//           document.removeEventListener("scroll", lazyload);
-//           window.removeEventListener("resize", lazyload);
-//           window.removeEventListener("orientationChange", lazyload);
-//         }
-//       }, 20);
-//     }
-
-//     document.addEventListener("scroll", lazyload);
-//     window.addEventListener("resize", lazyload);
-//     window.addEventListener("orientationChange", lazyload);
-//   }
-// })
-
     $(document).ready(function(){
         $.ajax({
             type: "GET",
