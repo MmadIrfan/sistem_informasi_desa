@@ -11,4 +11,14 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
+
+    public function visimisi()
+    {
+        return view('pages.visimisi');
+    }
+
+    public function sejarah()
+    {
+        return view('pages.sejarah');
+    }
 }

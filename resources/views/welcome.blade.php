@@ -1,117 +1,6 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
-<head>
-    <title>
-                    Desa Sindangjawa | Beranda
-            </title>
-
-    
-    <link rel="shortcut icon" href="https://w1.pngwing.com/pngs/823/446/png-transparent-java-logo-cirebon-bekasi-regency-kpu-kabupaten-cirebon-cirebon-regency-symbol-education-sri-baduga-maharaja-west-java.png" />
-
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Desa Sindangjawa" name="keywords">
-    <meta content="Sindangjawa adalah desa di kecamatan Dukupuntang, Cirebon, Jawa Barat, Indonesia." name="description">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHB1CQJRHH&amp;l=dataLayer&amp;cx=c"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143782567-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-143782567-1');
-    </script>
-    <!-- Web Application Manifest -->
-    
-    <!-- Chrome for Android theme color -->
-    
-    <!-- Add to homescreen for Chrome on Android -->
-    
-    
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/sistem_informasi_desa/resources/css/landingcss/plugins.css">
-    <link rel="stylesheet" href="http://localhost/sistem_informasi_desa/resources/css/landingcss/style.css">
-    <link rel="preload" href="http://localhost/sistem_informasi_desa/resources/css/landingcss/fonts/dm.css" as="style" onload="this.rel='stylesheet'">
-    <style>
-        img.lazy {
-            background: #F1F1FA;
-            width: 100%;
-            height: 30%;
-            display: block;
-            margin: 0;
-            border: 0;
-        }
-    </style>
-        <style>
-        .embed-youtube {
-    background-color: #000;
-    margin-bottom: 30px;
-    position: relative;
-    padding-top: 56.25%;
-    overflow: hidden;
-    cursor: pointer;
-}
-.embed-youtube img {
-    width: 100%;
-    top: -16.84%;
-    left: 0;
-    opacity: 0.7;
-}
-.embed-youtube .embed-youtube-play {
-    width: 68px;
-    height: 48px;
-    background-color: #333;
-    box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
-    z-index: 1;
-    opacity: 0.8;
-    border-radius: 6px;
-}
-.embed-youtube .embed-youtube-play:before {
-    content: "";
-    border-style: solid;
-    border-width: 15px 0 15px 26.0px;
-    border-color: transparent transparent transparent #fff;
-}
-.embed-youtube img,
-.embed-youtube .embed-youtube-play {
-    cursor: pointer;
-}
-.embed-youtube img,
-.embed-youtube iframe,
-.embed-youtube .embed-youtube-play,
-.embed-youtube .embed-youtube-play:before {
-    position: absolute;
-}
-.embed-youtube .embed-youtube-play,
-.embed-youtube .embed-youtube-play:before {
-    top: 50%;
-    left: 50%;
-    transform: translate3d( -50%, -50%, 0 );
-}
-.embed-youtube iframe {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.embed-youtube .embed-youtube-play:hover {
-    background-color: #f00;
-}
-    </style>
-
-</head>
-
+@include('templates.header')
 <body>
 <div class="content-wrapper">
-  @include('template.header')
         <section class="wrapper bg-light">
       <div class="container pt-8 pt-md-14">
         <div class="row gx-lg-0 gx-xl-8 gy-10 gy-md-13 gy-lg-0 mb-7 mb-md-10 mb-lg-16 align-items-center">
@@ -122,7 +11,7 @@
           </div>
           <!-- wlcme text -->
          <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 mt-lg-n2 text-center text-lg-start order-2 order-lg-0" data-cues="slideInDown" data-group="page-title" data-delay="600">
-            <h1 class="display-1 mb-5 mx-md-10 mx-lg-0">Selamat Datang Di Desa Sindangjawa <br/><span class="typer text-orange text-nowrap" data-delay="100" data-words="Dukupuntang,Cirebon,Jawa Barat,Indonesia"></span><span class="cursor text-primary" data-owner="typer"></span></h1>
+            <h1 class="display-1 mb-5 mx-md-10 mx-lg-0">Selamat Datang Di Desa Sindangjawa <br/><span class="typer text-orange text-nowrap" data-delay="100" data-words="Dukupuntang,Cirebon,Jawa Barat,Indonesia"></span><span class="cursor text-orange" data-owner="typer"></span></h1>
             <p class="lead fs-lg mb-7">Sindangjawa adalah desa di kecamatan Dukupuntang, Cirebon, Jawa Barat, Indonesia.</p>
 
             <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
@@ -136,16 +25,16 @@
       <!-- tentang smkn 1 Depok -->
       <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center mb-14 mb-md-17 mb-lg-10">
           <div class="col-md-8 col-lg-6 position-relative light-gallery-wrapper">
-            <!-- <a href="https://vimeo.com/374265101" class="btn btn-circle btn-primary btn-play ripple mx-auto mb-5 lightbox position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;"><i class="icn-caret-right"></i></a> -->
-            <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
-            <figure class="rounded"><img class="lazyimage" data-lazyimg="https://www.smkn1depok.sch.id/assets/images/sekolah/dalam-onedek.jpg" alt="SMKN 1 Depok" loading="lazy"></figure>
+            <!-- <a href="https://vimeo.com/374265101" class="btn btn-circle btn-orange btn-play ripple mx-auto mb-5 lightbox position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;"><i class="icn-caret-right"></i></a> -->
+            <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
+            <figure class="rounded"><img class="lazyimage" data-lazyimg="https://www.smkn1depok.sch.id/assets/images/sekolah/dalam-onedek.jpg" alt="Desa Sindangjawa" loading="lazy"></figure>
           </div>
           <!--/column -->
           <div class="col-lg-5 offset-lg-1">
             <h2 class="fs-15 text-uppercase text-muted mb-3">Siapa Kami?</h2>
             <h3 class="display-4 mb-6">Tentang Desa Sindangjawa</h3>
             <p class="mb-6">Sindangjawa adalah desa di kecamatan Dukupuntang, Cirebon, Jawa Barat, Indonesia. Berawal sekitar abad 16 masehi, seorang Resi yang bernama Pandunata mempunyai seorang putri bernama Nyi Mas Indang Larasakti, mendirikan sebuah pedukuhan disebelah utara kaki gunung Ciremai yang diberi nama Padukuhan Banjarmelati.</p>
-            <a href="https://www.smkn1depok.sch.id/profil/sejarah_sekolah">Baca Selengkapnya</a>
+            <a href="/sejarah">Baca Selengkapnya</a>
             <p class="mb-6"></p>
             
           </div>
@@ -156,7 +45,7 @@
       <div class="container py-14 py-md-16">
         <div class="row">
           <div class="col-lg-9 col-xl-8 col-xxl-7">
-            <h2 class="fs-16 text-uppercase text-line text-primary mb-3">Berita</h2>
+            <h2 class="fs-16 text-uppercase text-line text-orange mb-3">Berita</h2>
             <a href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah"><h3 class="display-4 mb-9">Berita Terbaru Desa Sindangjawa</h3></a>
           </div>
         </div>
@@ -289,7 +178,7 @@
 
        <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center mb-14 mb-md-17 mb-lg-19">
           <div class="col-md-8 col-lg-6 position-relative light-gallery-wrapper">
-            <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
+            <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
             <figure class="rounded"><img class="lazyimage" data-lazyimg="https://harianpelitanews.id/wp-content/uploads/2020/03/IMG-20200326-WA0017.jpg" srcset="https://harianpelitanews.id/wp-content/uploads/2020/03/IMG-20200326-WA0017.jpg 2x" alt="H. E. Kasturi"></figure>
           </div>
           <!--/column -->
@@ -536,7 +425,7 @@
               <div class="p-10 p-md-11 p-lg-14">
                 <div class="d-flex flex-row">
                     <div>
-                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                      <div class="icon text-orange fs-28 me-4 mt-n1">
                         <i class="uil uil-location-pin-alt"></i>
                       </div>
                     </div>
@@ -550,7 +439,7 @@
                   <!--/div -->
                   <div class="d-flex flex-row">
                     <div>
-                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                      <div class="icon text-orange fs-28 me-4 mt-n1">
                         <i class="uil uil-phone-volume"></i>
                       </div>
                     </div>
@@ -567,7 +456,7 @@
                   <!--/div -->
                   <div class="d-flex flex-row">
                     <div>
-                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                      <div class="icon text-orange fs-28 me-4 mt-n1">
                         <i class="uil uil-envelope"></i>
                       </div>
                     </div>
@@ -583,7 +472,7 @@
                   <!--/div -->
                   <div class="d-flex flex-row">
                       <div>
-                        <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <div class="icon text-orange fs-28 me-4 mt-n1">
                           <i class="uil uil-instagram-alt"></i>
                         </div>
                       </div>
@@ -599,7 +488,7 @@
                     <!--/div -->
                     <div class="d-flex flex-row">
                       <div>
-                        <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <div class="icon text-orange fs-28 me-4 mt-n1">
                           <i class="uil uil-youtube"></i>
                         </div>
                       </div>
@@ -645,98 +534,7 @@
 
         
 </div>
-@extends('template.footer')
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
-<script src="http://localhost/sistem_informasi_desa/resources/js/landingjs/plugins.js"></script>
-<script src="http://localhost/sistem_informasi_desa/resources/js/landingjs/theme.js"></script>
-
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-
-<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
-
-
-<script>
-async function loadID(item){
-    item.forEach(result => {
-        observer.observe(result);
-    });
-}
-
-let options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.25
-};
-
-let callback = (entries, observer) => {
-    entries.forEach( result => {
-        if(result.isIntersecting && result.target.className.includes('lazyimage')){
-            let imageURL = result.target.getAttribute('data-lazyimg');
-            if(imageURL){
-                result.target.src = imageURL;
-                observer.unobserve(result.target);   
-            }
-        }
-    });
-        // $('#filer-all').attr('class', 'filter-item'); 
-        // $('#filer-all').attr('class', 'filter-item active');
-};
-
-let observer = new IntersectionObserver(callback, options);
-const getIndexex = document.querySelectorAll('.lazyimage');
-loadID(getIndexex);
-
-    
-(function(){
-  let YouTubeContainers = document.querySelectorAll(".embed-youtube");
-
-  // Iterate over every YouTube container you may have
-  for (let i = 0; i < YouTubeContainers.length; i++) {
-    let container = YouTubeContainers[i];
-    let splitedSource = container.dataset.videoId.split("?");
-    let imageSource = "https://img.youtube.com/vi/"+ splitedSource[0] +"/sddefault.jpg"; 
-
-    // Load the Thumbnail Image asynchronously
-    let image = new Image();
-    image.src = imageSource;
-    image.alt = splitedSource[1];
-    image.addEventListener("load", function() {
-      container.appendChild(image);
-    });
-
-    // When the user clicks on the container, load the embedded YouTube video
-    container.addEventListener("click", function() {
-      let iframe = document.createElement( "iframe" );
-
-      iframe.setAttribute("frameborder", "0");
-      iframe.setAttribute("allowfullscreen", "");
-      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-      // Important: add the autoplay GET parameter, otherwise the user would need to click over the YouTube video again to play it 
-      iframe.setAttribute("src", "https://www.youtube.com/embed/"+ this.dataset.videoId +"?rel=0&showinfo=0&autoplay=1");
-      iframe.setAttribute("alt", splitedSource[1]);
-
-      // Clear Thumbnail and load the YouTube iframe
-      this.innerHTML = "";
-      this.appendChild( iframe );
-    });
-  }
-})();
-    $(document).ready(function(){
-        $.ajax({
-            type: "GET",
-            url: "https://www.smkn1depok.sch.id/index/kontak",
-            dataType: 'json',
-            success: function(data) {
-                $("#address").text(data.alamat[0].isi);
-                $("#_email").text(data.email[0].isi);
-                $("#_phone").text(data.telepon[0].isi);
-
-            }
-        });
-    });
-</script>
+@extends('templates.footer')
 </body>
     
     

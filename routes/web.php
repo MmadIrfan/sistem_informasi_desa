@@ -17,7 +17,8 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', [HomeController::class,'index']);
-
+Route::get('/visimisi', [HomeController::class,'visimisi']);
+Route::get('/sejarah', [HomeController::class,'sejarah']);
 
 //Auth
 Route::get('/login', [AuthController::class,'login'])->name('login');
