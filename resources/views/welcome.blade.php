@@ -187,7 +187,7 @@
             <h3 class="display-4 mb-6">H. E. Kasturi</h3>
             <p class="mb-6">Puji dan syukur marilah kita panjatkan kehadirat Allah SWT. atas limpahan rahmat, taufik dan hidayah-Nya, kita semua diberikan kesehatan sehingga dapat melaksanakan tugas kita di bidang pendidikan.</p>
             <p class="mb-6">Para pengunjung situs yang berbahagia, kami ucapkan selamat datang di situs SMKN 1 Depok ini. Kami menyadari sepenuhnya dalam rangka memajukan pendidikan di era berkembangnya Teknologi Informasi yang begitu pesat, sangat diperlukan berbagai sarana prasarana yang kondusif.</p>
-            <a href="https://www.smkn1depok.sch.id/profil/kepala-sekolah">Baca Selengkapnya</a>
+            <a href="/sambutan">Baca Selengkapnya</a>
           </div>
      </div>
 

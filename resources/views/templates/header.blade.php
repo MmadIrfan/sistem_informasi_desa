@@ -129,15 +129,14 @@
                       <ul class="dropdown-menu">
                         <li class="nav-item"><a class="dropdown-item" href="/visimisi">Visi Misi</a></li>
                         <li class="nav-item"><a class="dropdown-item" href="/sejarah">Sejarah</a></li>
-                        <li class="nav-item"><a class="dropdown-item" href="">Kepala Desa</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="/sambutan">Kepala Desa</a></li>
                     </ul>
                   </li>
-                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="javaScript:void(0)">RW</a>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="javaScript:void(0)">Gambaran Umum</a>
                       <ul class="dropdown-menu">
-                                                <li class="nav-item"><a class="dropdown-item" href="">RW 1  </a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="">RW 2 </a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="">RW 3  </a></li>
-                                                <li class="nav-item"><a class="dropdown-item" href="">RW 4  </a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="/geografis">Kondisi Geografis  </a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="/demografis">Demografis </a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="/kondisiekonomi">Kondisi Ekonomi </a></li>
                                               </ul>
                   </ul>
                 </li>

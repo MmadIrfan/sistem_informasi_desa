@@ -19,6 +19,10 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [HomeController::class,'index']);
 Route::get('/visimisi', [HomeController::class,'visimisi']);
 Route::get('/sejarah', [HomeController::class,'sejarah']);
+Route::get('/sambutan', [HomeController::class,'kepaladesa']);
+Route::get('/geografis', [HomeController::class,'geografis']);
+Route::get('/demografis', [HomeController::class,'demografis']);
+Route::get('/kondisiekonomi', [HomeController::class,'kondisiekonomi']);
 
 //Auth
 Route::get('/login', [AuthController::class,'login'])->name('login');

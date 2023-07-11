@@ -14,11 +14,31 @@ class HomeController extends Controller
 
     public function visimisi()
     {
-        return view('pages.visimisi');
+        return view('pages.desa.visimisi');
     }
 
     public function sejarah()
     {
-        return view('pages.sejarah');
+        return view('pages.desa.sejarah');
+    }
+
+    public function kepaladesa()
+    {
+        return view('pages.desa.kepaladesa');
+    }
+
+    public function geografis()
+    {
+        return view('pages.gambaranumum.geografis');
+    }
+
+    public function demografis()
+    {
+        return view('pages.gambaranumum.demografis');
+    }
+
+    public function kondisiekonomi()
+    {
+        return view('pages.gambaranumum.kondisiekonomi');
     }
 }
