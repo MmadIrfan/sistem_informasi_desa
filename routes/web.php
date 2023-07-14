@@ -23,6 +23,7 @@ Route::get('/sambutan', [HomeController::class,'kepaladesa']);
 Route::get('/geografis', [HomeController::class,'geografis']);
 Route::get('/demografis', [HomeController::class,'demografis']);
 Route::get('/kondisiekonomi', [HomeController::class,'kondisiekonomi']);
+Route::get('/beritadesa', [HomeController::class,'beritadesa']);
 
 //Auth
 Route::get('/login', [AuthController::class,'login'])->name('login');

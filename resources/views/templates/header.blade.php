@@ -143,7 +143,7 @@
 
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javaScript:void(0)">Berita</a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="dropdown-item" href="">Berita Desa</a></li>
+                    <li class="nav-item"><a class="dropdown-item" href="/beritadesa">Berita Desa</a></li>
                     <li class="nav-item"><a class="dropdown-item" href="">Pengumuman</a></li>
                   </ul>
                 </li>

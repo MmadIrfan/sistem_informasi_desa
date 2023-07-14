@@ -175,8 +175,7 @@
         </div>
         </div>
       </section>
-
-       <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center mb-14 mb-md-17 mb-lg-19">
+      <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center mb-14 mb-md-17 mb-lg-19">
           <div class="col-md-8 col-lg-6 position-relative light-gallery-wrapper">
             <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
             <figure class="rounded"><img class="lazyimage" data-lazyimg="https://harianpelitanews.id/wp-content/uploads/2020/03/IMG-20200326-WA0017.jpg" srcset="https://harianpelitanews.id/wp-content/uploads/2020/03/IMG-20200326-WA0017.jpg 2x" alt="H. E. Kasturi"></figure>

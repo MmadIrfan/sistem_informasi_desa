@@ -41,4 +41,9 @@ class HomeController extends Controller
     {
         return view('pages.gambaranumum.kondisiekonomi');
     }
+
+    public function beritadesa()
+    {
+        return view('pages.berita.beritadesa');
+    }
 }
