@@ -148,7 +148,7 @@
                   </ul>
                 </li>
 
-                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javaScript:void(0)">Lembaga</a>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="javaScript:void(0)">Lembaga</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item"><a class="dropdown-item" href="">PKK</a></li>
                     <li class="nav-item"><a class="dropdown-item" href="">Karang Taruna</a></li>

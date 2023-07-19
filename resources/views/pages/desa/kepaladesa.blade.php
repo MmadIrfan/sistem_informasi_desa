@@ -42,8 +42,8 @@
                                                 </p>
                                             </div>
                                         </article>
-                                 </div>
-                             </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

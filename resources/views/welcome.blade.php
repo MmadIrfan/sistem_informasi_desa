@@ -221,7 +221,7 @@
     </section>
 <!-- /section -->
 
-       <!-- guru -->
+      <!-- guru -->
     <div class="row gx-lg-8 gx-xl-12 gy-10 mb-16 mb-md-17 mb-xl-10 align-items-center">
           <div class="col-lg-4">
             <h2 class="fs-15 text-uppercase text-muted mb-3">Tenaga kerja</h2>

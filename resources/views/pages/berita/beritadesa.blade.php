@@ -1,6 +1,6 @@
 @include('templates.header')
 <!-- berita -->
-     <section class="wrapper bg-light angled upper-end">
+    <section class="wrapper bg-light angled upper-end">
         <div class="container py-14 py-md-16">
           <div class="row">
             <div class="col-lg-9 col-xl-8 col-xxl-7">
