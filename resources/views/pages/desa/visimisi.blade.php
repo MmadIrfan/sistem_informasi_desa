@@ -31,20 +31,16 @@
                                 <!-- <figure class="card-img-top"><img src="./assets/img/photos/b1.jpg" alt="" /> -->
                                 </figure>
                                 <div class="card-body">
-                                    <div class="classic-view">
-                                        <br class="post">
-                                        <br class="post-content mb-5">
+                                    <div class="classic-view">                        
                                         <h2 class="h1 mb-4">Visi</h2>
                                         <p>
-                                            Menghasilkan lulusan yang unggul dalam IMTAQ dan IPTEK, serta mampu bersaing pada tingkat nasional dan global.
+                                        MEWUJUDKAN, DESA MANDIRI, RELIGI, SEJAHTERA, ADIL DAN MAKMUR.
                                         </p>
 
                                         <h2 class="h1 mb-4">Misi</h2>
                                         <p>
-                                            1. Melaksanakan kurikulum melalui pembelajaran dan penilaian berbasis kompetensi, berbasis wirausaha, akhlakul kharimah dan berwawasan.<br><br> 2. Menumbuhkan semangat kreatifitas, unggul secara optimal dan
-                                            kepada seluruh siswa dan warga sekolah.<br><br> 3. Mendorong dan membantu setiap siswa untuk mengenali potensi dirinya, sehingga dapat berkembang secara optimal.<br><br> 4. Menumbuhkan penghayatan terhadap agama
-                                            yang dianut dan juga etika moral sehingga menjadi sumber kearifan dalam bertindak.<br><br> 5. Menerapkan manajemen partisipasi dengan melibatkan seluruh warga sekolah dan meningkatkan kualitas sumber daya manusia
-                                            melalui sertifikasi guru serta diklat untuk staf dan karyawan.
+                                        1. Meningkatkan Sumber Daya Manusia (SDM) Aparatur Pemerintahan, Kelembagaan dan Masyarakat sehingga tata kelola Pemerintahan Desa menjadi lebih baik;<br><br>2. Meningkatkan Pelayanan yang maksimal kepada Masyarakat;<br><br>3. Meningkatkan sarana daan prasarana dari segi fisik, ekonomi, pendidikan, kesehatan, kebudayaan di Desa;<br><br>4. Meningkatkan kehidupan yang harmonis, toleran, saling menghormati dalam kehidupan berbudaya dan beragama di Desa Sindaangjawa;<br><br>
+                                        5. Meningkatkan kesehatan dengan prilaku hidup bersih dan sehat dalam tatanan Rumah tangga;<br><br>6. Meningkatkan kesejahteraan masyarakat Desa dengan mendirikan Badan Usaha Milik Desa (BUMDES); dan program lain untuk membuka lapangan kerja bagi masyarakat desa, serta meningkatkan produksi rumah tangga kecil;<br><br>7. Mengedepankan kejujuran, keadilan, transfaransi dalam kehidupan sehari-hari, baik dalam pemerintahan maupun dengan masyarakat.<br><br>8. Mewujudkan keamanan dan ketertiban dilingkungan desa.
                                         </p>
 
                                     </div>
