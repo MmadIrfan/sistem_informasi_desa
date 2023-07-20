@@ -284,7 +284,14 @@
             <i class="fas fa-building"></i>
             <p>
           Pemerintahan Desa
-    
+        </p>
+          </a>
+        </li>
+        <li class="nav-item menu">
+          <a href="/pemdes" class="nav-link active">
+            <i class="fas fa-image"></i>
+            <p>
+          Galeri
         </p>
           </a>
         </li>
