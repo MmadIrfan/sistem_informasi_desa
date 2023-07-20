@@ -185,7 +185,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="./index.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Visi Misi</p>
                 </a>
@@ -204,8 +204,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item menu">
+            <a href="#" class="nav-link">
               <i class="fas fa-scroll"></i>
               <p>
                 Gambaran Umum
@@ -233,8 +233,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item menu">
+            <a href="#" class="nav-link">
               <i class="fas fa-newspaper"></i>
               <p>
                 Berita
@@ -256,8 +256,8 @@
               </li>
             </ul>
           </li>
-              <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
+              <li class="nav-item menu">
+                <a href="#" class="nav-link">
                   <i class="fas fa-table"></i>
                   <p>
                 Lembaga
@@ -280,7 +280,7 @@
         </ul>
         </li>
         <li class="nav-item menu">
-          <a href="/pemdes" class="nav-link active">
+          <a href="/pemdes" class="nav-link">
             <i class="fas fa-building"></i>
             <p>
           Pemerintahan Desa
