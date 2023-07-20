@@ -254,10 +254,12 @@
                   <p>Pengumuman</p>
                 </a>
               </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
+            </ul>
+          </li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="fas fa-table"></i>
+                  <p>
                 Lembaga
                 <i class="fas fa-angle-left right"></i>
               </p>
@@ -275,23 +277,17 @@
                   <p>Karang Taruna</p>
                 </a>
               </li>
-          <li class="nav-header">EXAMPLES</li>
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="fas fa-building"></i>
-              <p>
-                Pemerintahan Desa
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Gallery
-              </p>
-            </a>
-          </li>
+        </ul>
+        </li>
+        <li class="nav-item menu">
+          <a href="/pemdes" class="nav-link active">
+            <i class="fas fa-building"></i>
+            <p>
+          Pemerintahan Desa
+    
+        </p>
+          </a>
+        </li>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
