@@ -31,4 +31,5 @@ Route::post('/login', [AuthController::class,'authenticated']);
 Route::get('/logout', [AuthController::class,'logout']);
 
 //Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard/createsejarah', [DashboardController::class, 'sejarah']);

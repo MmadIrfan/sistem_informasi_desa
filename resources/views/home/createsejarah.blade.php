@@ -7,10 +7,10 @@
     <div class="card-body">
       <div class="classic-view">
           <article class="post">
-              <h1>Visi Misi </h1>
+              <h1>Sejarah Desa </h1>
               <div class="text-left">
                 <p>
-                  Ini Create Visi Misi
+                  Ini Create Sejarah
                 </p>
                 </div>
         </article>
