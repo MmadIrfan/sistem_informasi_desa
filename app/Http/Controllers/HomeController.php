@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Anggota;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -45,5 +46,11 @@ class HomeController extends Controller
     public function beritadesa()
     {
         return view('pages.berita.beritadesa');
+    }
+
+    public function anggota()
+    {
+        $anggotas = Anggota::latest();
+        return view('pages.pemerintahandesa.anggota', compact('anggotas'));
     }
 }
