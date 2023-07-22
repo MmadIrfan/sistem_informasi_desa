@@ -44,7 +44,8 @@
             <a class="navbar-brand" href="admin">Desa Sindangjawa</a>
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-                <a href="/logout"><button style='font-size:18px'>Keluar <i class='fas fa-sign-out-alt'></i></button></a>
+                <a href="/logout"><button style='font-size:18px' class="btn btn-md btn-link">Keluar <i
+                            class='fas fa-sign-out-alt'></i></button></a>
             </ul>
         </nav>
         <!-- /.navbar -->

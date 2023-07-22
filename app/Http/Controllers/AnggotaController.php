@@ -32,7 +32,7 @@ class AnggotaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'image'     => 'required|image|mimes:png,jpg,jpeg',
+            'image'     => 'required|image|mimes:png,jpg,jpeg|max:2048',
             'nama'     => 'required',
             'jabatan'   => 'required'
         ]);
@@ -49,10 +49,10 @@ class AnggotaController extends Controller
     
         if($anggota){
             //redirect dengan pesan sukses
-            return redirect()->route('updateanggota.index')->with(['Berhasil' => 'Data Berhasil Disimpan!']);
+            return redirect()->route('updateanggota.index')->with(['success' => 'Data Berhasil Disimpan!']);
         }else{
             //redirect dengan pesan error
-            return redirect()->route('updateanggota.index')->with(['Gagal' => 'Data Gagal Disimpan!']);
+            return redirect()->route('updateanggota.index')->with(['error' => 'Data Gagal Disimpan!']);
         }
     }
 
@@ -67,17 +67,60 @@ class AnggotaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Anggota $anggota)
+    public function edit($id)
     {
-        //
+        //Ambil anggota berdasarkan id
+        $anggota = Anggota::find($id);
+        return view('home.pemerintahandesa.editanggota', compact('anggota'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Anggota $anggota)
+    public function update(Request $request, Anggota $anggota, $id)
     {
-        //
+        $this->validate($request, [
+            'image'     => 'image|mimes:jpeg,png,jpg|max:2048',
+            'nama'     => 'required',
+            'jabatan'   => 'required'
+        ]);
+
+        $anggota = Anggota::find($id);
+
+        //check if image is uploaded
+        if ($request->hasFile('image')) {
+
+            //upload new image
+            $image = $request->file('image');
+            $image->storeAs('public/anggota', $image->hashName());
+
+            //delete old image
+            Storage::delete('public/anggota/'.$anggota->image);
+
+            //update anggota with new image
+            $anggota->update([
+                'image'     => $image->hashName(),
+                'nama'     => $request->nama,
+                'jabatan'   => $request->jabatan
+            ]);
+
+        } else {
+
+            //update post without image
+            $anggota->update([
+                'nama'     => $request->nama,
+                'jabatan'   => $request->jabatan
+            ]);
+        }
+
+        //redirect to index
+        if($anggota){
+            //redirect dengan pesan sukses
+            return redirect()->route('updateanggota.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        }else{
+            //redirect dengan pesan error
+            return redirect()->route('updateanggota.index')->with(['error' => 'Data Gagal Disimpan!']);
+        }
     }
 
     /**
