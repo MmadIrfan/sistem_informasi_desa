@@ -13,8 +13,14 @@ class SejarahController extends Controller
      */
     public function index()
     {
-        $sejarahs = Sejarah::latest();
+        $sejarahs = Sejarah::latest()->paginate(1);
         return view('home.desa.sejarah.indexsejarah', compact('sejarahs'));
+    }
+
+    public function datasejarah()
+    {
+        $sejarahs = Sejarah::all();
+        return redirect()->route('sejarah')->with('sejarah', $sejarahs);
     }
 
     /**
@@ -44,17 +50,33 @@ class SejarahController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Sejarah $sejarah)
+    public function edit($id)
     {
-        //
+        $sejarah = Sejarah::find($id);
+        return view('home.desa.sejarah.editsejarah', compact('sejarah'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Sejarah $sejarah)
+    public function update(Request $request, Sejarah $sejarah, $id)
     {
-        //
+        $this->validate($request, [
+            'content'     => 'required'
+        ]);
+            $sejarah = Sejarah::find($id);
+            $sejarah->update([
+                'content'   => $request->content
+            ]);
+
+        //redirect to index
+        if($sejarah){
+            //redirect dengan pesan sukses
+            return redirect()->route('updatesejarah.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        }else{
+            //redirect dengan pesan error
+            return redirect()->route('updatesejarah.index')->with(['error' => 'Data Gagal Disimpan!']);
+        }
     }
 
     /**

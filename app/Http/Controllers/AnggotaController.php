@@ -126,8 +126,15 @@ class AnggotaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Anggota $anggota)
+    public function destroy(Anggota $anggota, $id)
     {
-        //
+        $anggota = Anggota::find($id);
+
+        Storage::delete('public/anggota/'.$anggota->image);
+
+        $anggota->delete();
+
+        return redirect()->route('updateanggota.index')->with(['success' => 'Data Berhasil Dihapus!']);
+
     }
 }

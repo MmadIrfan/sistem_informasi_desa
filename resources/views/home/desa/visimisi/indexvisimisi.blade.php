@@ -2,18 +2,46 @@
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- wlcme text -->
-    <div class="text-center">
-        <div class="card-body">
-            <div class="classic-view">
-                <article class="post">
-                    <h1>Visi Misi </h1>
-                    <div class="text-left">
-                        <p>
-                            Ini Create Visi Misi
-                        </p>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card border-0 shadow rounded">
+                <div class="card-body">
+                    <div class="card-body">
+                        <div class="classic-view">
+                            <article class="post">
+                                <h1 class="text-center">Visi Misi </h1>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th scope="col">VISI</th>
+                                                <th scope="col">MISI</th>
+                                                <th scope="col">AKSI</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse ($visimisis as $visimisi)
+                                                <tr>
+                                                    <td class="text-left">{{ $visimisi->visi }}</td>
+                                                    <td class="text-left">{!! $visimisi->misi !!}</td>
+                                                    <td class="text-center">
+                                                        <a href="{{ route('updatevisimisi.edit', $visimisi->id) }}"
+                                                            class="btn btn-sm btn-primary">EDIT</a>
+                                                    </td>
+                                                </tr>
+                                            @empty
+                                                <div class="alert alert-danger">
+                                                    Data visimisi belum Tersedia.
+                                                </div>
+                                            @endforelse
+                                        </tbody>
+                                    </table>
+                                    {{ $visimisis->links() }}
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </div>

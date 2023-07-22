@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Anggota;
+use App\Models\Kepaladesa;
+use App\Models\Sejarah;
+use App\Models\Visimisi;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,17 +18,20 @@ class HomeController extends Controller
 
     public function visimisi()
     {
-        return view('pages.desa.visimisi');
+        $visimisis = Visimisi::all();
+        return view('pages.desa.visimisi', ['visimisis' => $visimisis]);
     }
 
     public function sejarah()
     {
-        return view('pages.desa.sejarah');
+        $sejarahs = Sejarah::all();
+        return view('pages.desa.sejarah', ['sejarahs' => $sejarahs]);
     }
 
     public function kepaladesa()
     {
-        return view('pages.desa.kepaladesa');
+        $kepaladesas = Kepaladesa::all();
+        return view('pages.desa.kepaladesa', ['kepaladesas' => $kepaladesas]);
     }
 
     public function geografis()

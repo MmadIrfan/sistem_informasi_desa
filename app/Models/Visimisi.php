@@ -10,6 +10,6 @@ class Visimisi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'content'
+        'visi', 'misi'
     ];
 }
