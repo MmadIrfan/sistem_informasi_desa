@@ -25,8 +25,8 @@
 
         <!--/.row -->
         <div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0">
-            <div class="col-md-6 col-lg-3">
-                @forelse ($anggotas as $anggota)
+            @forelse ($anggotas as $anggota)
+                <div class="col-md-6 col-lg-3">
                     <div class="position-relative">
                         <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
                             style="right: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0;">
@@ -47,14 +47,15 @@
                         </div>
                         <!-- /.card -->
                     </div>
-                @empty
-                    <div class="alert alert-danger">
-                        Data Anggota belum Tersedia.
-                    </div>
-                @endforelse
-                <!-- /div -->
-            </div>
-            <!--/column -->
+
+                    <!-- /div -->
+                </div>
+                <!--/column -->
+            @empty
+                <div class="alert alert-danger">
+                    Data Anggota belum Tersedia.
+                </div>
+            @endforelse
         </div>
         <!--/.row -->
 
