@@ -2,18 +2,44 @@
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- wlcme text -->
-    <div class="text-center">
-        <div class="card-body">
-            <div class="classic-view">
-                <article class="post">
-                    <h1>Demografis</h1>
-                    <div class="text-left">
-                        <p>
-                            Ini Create Demografis
-                        </p>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card border-0 shadow rounded">
+                <div class="card-body">
+                    <div class="card-body">
+                        <div class="classic-view">
+                            <article class="post">
+                                <h1 class="text-center">DEMOGRAFIS DESA SINDANGJAWA</h1>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th scope="col">DEMOGRAFIS</th>
+                                                <th scope="col">AKSI</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse ($demografis as $data)
+                                                <tr>
+                                                    <td class="text-left">{!! $data->isi !!}</td>
+                                                    <td class="text-center">
+                                                        <a href="{{ route('updatedemografis.edit', $data->id) }}"
+                                                            class="btn btn-sm btn-primary">EDIT</a>
+                                                    </td>
+                                                </tr>
+                                            @empty
+                                                <div class="alert alert-danger">
+                                                    Data demografis belum Tersedia.
+                                                </div>
+                                            @endforelse
+                                        </tbody>
+                                    </table>
+                                    {{ $demografis->links() }}
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </div>

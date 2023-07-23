@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Demografis extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'isi'
+    ];
 }
