@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Demografis;
+use App\Models\Ekonomi;
 use App\Models\Geografis;
 use App\Models\Kepaladesa;
 use App\Models\Sejarah;
@@ -300,6 +301,49 @@ class DatabaseSeeder extends Seeder
             <p>&bull; Poskamling : 9 Buah</p>
             
             <p>&bull; Pemakaman Umum (TPU) : 5 Lokasi</p>'
+        ]);
+
+        Ekonomi::create([
+            'isi' => '<p>A. Potensi Unggulan Desa</p>
+
+            <p>Potensi Unggulan Ekonomi desa adalah sektor pertanian, terdapat lahan pertanian 100 Ha 40 % sawah irigasi teknis dan 48 % sawah irigasi non teknis, dari luas wilayah desa Sindangjawa 211,998 Ha, Peternakan, Perikanan, Perkebunan dan Kerajinan.</p>
+            
+            <p>B. Pertumbuhan Ekonomi Desa</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pertumbuhan perekonomian desa Sindangjawa akhir tahun 2019 ada peningkatan, dengan didirikannya BUMDes, masyarakat termotifasi dan tumbuh kasadaran untuk membentuk Koperasi dan kelompok-kelompok usaha lainnya, diantaranya Koperasi &ldquo;Bina Sejahtera&rdquo; yang digerakan oleh ibu-ibu PKK desa Sindangjawa dan 17 (tujuhbelas) kelompok tani yang terdiri dari kelompok tani pangan, kelompok ternak, kelompok unggas, kelompok perikanan dan kelompok pedagang bakulan yang tergabung dalam gabungan kelompok tani &ldquo;Sidabangkit Jaya&rdquo;</p>
+            
+            <p>Desa Sindangjawa memiliki potensi unggulan ekonomi masyarakat, disamping potensi pertanian yang sangat dominan ada pula potensi-potensi lain yang menjadi produk andalan Desa Sindangjawa, sebagai berikut :</p>
+            
+            <p>1. Koperasi : Berkah Sejahtera. Sikado</p>
+            
+            <p>2. Kerajinan :</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Rattan : PT. Romana Wicker</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Meubeler : Sagung Jaya, H. Carsina, Waluyo, Ubaidilah, Suherman dan lainnya</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Sankar Burung : Abdurohman</p>
+            
+            <p>3. Konveksi : Sdr. Kholid</p>
+            
+            <p>4. Peternakan :</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Sapi Potong : Sdr.H. Abdul Rouf, Barnawi, Sapi&rsquo;I dan Suari</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Kambing/Domba : Kelompok Cikembang, Pontas Sari dan 28 Peternak lainnya.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Ayam : Gunawang, Widodo, Sukanta</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d. Itik : Sdr. Sunadi</p>
+            
+            <p>5. Perikanan : Kelompok Budi Mulya, Cigoek Fish. Mina Taruna, Sinar Mas</p>
+            
+            <p>6. Perkebunan : Sindangjawa Lestari</p>
+            
+            <p>7. Pedagang Kecil : 245 Pedagang</p>
+            
+            <p>8. Rumah Makan : Istana Sop Patin. Warung Nasi Sederhana</p>
+            '
         ]);
 
     }

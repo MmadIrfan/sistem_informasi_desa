@@ -2,18 +2,44 @@
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- wlcme text -->
-    <div class="text-center">
-        <div class="card-body">
-            <div class="classic-view">
-                <article class="post">
-                    <h1>Kondisi Ekonomi</h1>
-                    <div class="text-left">
-                        <p>
-                            Ini Create Kondisi Ekonomi
-                        </p>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card border-0 shadow rounded">
+                <div class="card-body">
+                    <div class="card-body">
+                        <div class="classic-view">
+                            <article class="post">
+                                <h1 class="text-center">EKONOMI DESA SINDANGJAWA</h1>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th scope="col">EKONOMI</th>
+                                                <th scope="col">AKSI</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse ($ekonomis as $data)
+                                                <tr>
+                                                    <td class="text-left">{!! $data->isi !!}</td>
+                                                    <td class="text-center">
+                                                        <a href="{{ route('updateekonomi.edit', $data->id) }}"
+                                                            class="btn btn-sm btn-primary">EDIT</a>
+                                                    </td>
+                                                </tr>
+                                            @empty
+                                                <div class="alert alert-danger">
+                                                    Data ekonomi belum Tersedia.
+                                                </div>
+                                            @endforelse
+                                        </tbody>
+                                    </table>
+                                    {{ $ekonomis->links() }}
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </div>
