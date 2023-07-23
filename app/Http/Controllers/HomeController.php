@@ -13,7 +13,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $sejarahs = Sejarah::all();
+        $kepaladesas = Kepaladesa::all();
+        return view('welcome',['sejarahs' => $sejarahs],['kepaladesas' => $kepaladesas]);
     }
 
     public function visimisi()

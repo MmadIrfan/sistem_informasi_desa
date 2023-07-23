@@ -48,13 +48,13 @@
                         <div class="col-lg-5 offset-lg-1">
                             <h2 class="fs-15 text-uppercase text-muted mb-3">Siapa Kami?</h2>
                             <h3 class="display-4 mb-6">Tentang Desa Sindangjawa</h3>
-                            <p class="mb-6">Sindangjawa adalah desa di kecamatan Dukupuntang, Cirebon, Jawa Barat,
-                                Indonesia. Berawal sekitar abad 16 masehi, seorang Resi yang bernama Pandunata mempunyai
-                                seorang putri bernama Nyi Mas Indang Larasakti, mendirikan sebuah pedukuhan disebelah
-                                utara kaki gunung Ciremai yang diberi nama Padukuhan Banjarmelati.</p>
+                            @foreach ($sejarahs as $sejarah)
+                                <p class="mb-6">
+                                    {!! substr($sejarah->content, 45, 312) !!}
+                                </p>
+                            @endforeach
                             <a href="/sejarah">Baca Selengkapnya</a>
                             <p class="mb-6"></p>
-
                         </div>
                     </div>
 
@@ -255,16 +255,14 @@
                         <div class="col-lg-5 offset-lg-1">
                             <h2 class="fs-15 text-uppercase text-muted mb-3">Kepala Desa</h2>
                             <h3 class="display-4 mb-6">H. E. Kasturi</h3>
-                            <p class="mb-6">Puji dan syukur marilah kita panjatkan kehadirat Allah SWT. atas limpahan
-                                rahmat, taufik dan hidayah-Nya, kita semua diberikan kesehatan sehingga dapat
-                                melaksanakan tugas kita di bidang pendidikan.</p>
-                            <p class="mb-6">Para pengunjung situs yang berbahagia, kami ucapkan selamat datang di
-                                situs SMKN 1 Depok ini. Kami menyadari sepenuhnya dalam rangka memajukan pendidikan di
-                                era berkembangnya Teknologi Informasi yang begitu pesat, sangat diperlukan berbagai
-                                sarana prasarana yang kondusif.</p>
+                            @foreach ($kepaladesas as $kepaladesa)
+                                <p class="mb-6">
+                                    {!! substr($kepaladesa->sambutan, 46, 660) !!}
+                                </p>
+                            @endforeach
                             <a href="/sambutan">Baca Selengkapnya</a>
                         </div>
-                    </div> 
+                    </div>
 
                     <!-- data Sekolah -->
                     <section class="wrapper bg-light">

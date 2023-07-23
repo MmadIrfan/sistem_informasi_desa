@@ -20,7 +20,7 @@ class KepaladesaController extends Controller
     public function datakepaladesa()
     {
         $kepaladesas = Kepaladesa::all();
-        return redirect()->route('kepaladesa')->with('kepaladesa', $kepaladesas);
+        return redirect()->route('kepaladesa', '')->with('kepaladesa', $kepaladesas);
     }
 
     /**

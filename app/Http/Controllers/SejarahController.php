@@ -20,7 +20,7 @@ class SejarahController extends Controller
     public function datasejarah()
     {
         $sejarahs = Sejarah::all();
-        return redirect()->route('sejarah')->with('sejarah', $sejarahs);
+        return redirect()->route('sejarah','')->with('sejarah', $sejarahs);
     }
 
     /**
