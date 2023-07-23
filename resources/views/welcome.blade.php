@@ -307,11 +307,10 @@
                         </div>
                         <!--/column -->
                         <div class="col-lg-8">
-                            @foreach ($anggotas as $anggota)
-                                <div class="carousel owl-carousel text-center" data-margin="30" data-dots="true"
-                                    data-autoplay="false" data-autoplay-timeout="5000"
-                                    data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
-
+                            <div class="carousel owl-carousel text-center" data-margin="30" data-dots="true"
+                                data-autoplay="false" data-autoplay-timeout="5000"
+                                data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
+                                @foreach ($anggotas as $anggota)
                                     <div class="item">
                                         <img class="rounded-circle img-fluid  mx-auto mb-4 "
                                             src="{{ Storage::url('public/anggota/') . $anggota->image }}"
@@ -321,10 +320,9 @@
                                         <p class="nim mb-2"></p>
                                         <!-- /.social -->
                                     </div>
-
-                                </div>
-                                <!-- /.owl-carousel -->
-                            @endforeach
+                                @endforeach
+                            </div>
+                            <!-- /.owl-carousel -->
                         </div>
                         <!--/column -->
                     </div>

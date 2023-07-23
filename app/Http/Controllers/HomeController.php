@@ -16,7 +16,11 @@ class HomeController extends Controller
         $sejarahs = Sejarah::all();
         $kepaladesas = Kepaladesa::all();
         $anggotas = Anggota::all();
-        return view('welcome',['sejarahs' => $sejarahs],['kepaladesas' => $kepaladesas],['anggotas' => $anggotas]);
+        return view('welcome',[
+            'sejarahs' => $sejarahs,
+            'kepaladesas' => $kepaladesas,
+            'anggotas' => $anggotas,
+        ]);
     }
 
     public function visimisi()
