@@ -15,7 +15,8 @@ class HomeController extends Controller
     {
         $sejarahs = Sejarah::all();
         $kepaladesas = Kepaladesa::all();
-        return view('welcome',['sejarahs' => $sejarahs],['kepaladesas' => $kepaladesas]);
+        $anggotas = Anggota::all();
+        return view('welcome',['sejarahs' => $sejarahs],['kepaladesas' => $kepaladesas],['anggotas' => $anggotas]);
     }
 
     public function visimisi()
@@ -58,7 +59,7 @@ class HomeController extends Controller
 
     public function anggota()
     {
-        $anggotas = Anggota::all();
+       $anggotas = Anggota::all();
         return view('pages.pemerintahandesa.anggota', ['anggotas' => $anggotas]);
     }
 }
