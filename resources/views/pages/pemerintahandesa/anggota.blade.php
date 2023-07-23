@@ -26,12 +26,13 @@
         <!--/.row -->
         <div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0">
             <div class="col-md-6 col-lg-3">
-                <div class="position-relative">
-                    <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
-                        style="right: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0;">
-                    </div>
-                    <div class="card cardGuru mb-5">
-                        @forelse ($anggotas as $anggota)
+                @forelse ($anggotas as $anggota)
+                    <div class="position-relative">
+                        <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
+                            style="right: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0;">
+                        </div>
+                        <div class="card cardGuru mb-5">
+
                             <figure class="card-img-top"><img class="lazyimage img-fluid"
                                     data-lazyimg="{{ Storage::url('public/anggota/') . $anggota->image }}"
                                     alt="{{ $anggota->image }}" />
@@ -41,15 +42,16 @@
                                 <a>{{ $anggota->jabatan }}</a>
                                 <p class="mb-0"></p>
                             </div>
-                        @empty
-                            <div class="alert alert-danger">
-                                Data Anggota belum Tersedia.
-                            </div>
-                        @endforelse
-                        <!--/.card-body -->
+
+                            <!--/.card-body -->
+                        </div>
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
-                </div>
+                @empty
+                    <div class="alert alert-danger">
+                        Data Anggota belum Tersedia.
+                    </div>
+                @endforelse
                 <!-- /div -->
             </div>
             <!--/column -->
