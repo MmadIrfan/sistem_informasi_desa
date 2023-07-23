@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Geografis extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'isi'
+    ];
 }

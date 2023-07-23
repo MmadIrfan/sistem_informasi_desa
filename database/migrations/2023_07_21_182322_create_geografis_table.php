@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('geografis', function (Blueprint $table) {
             $table->id();
+            $table->text('isi');
             $table->timestamps();
         });
     }
