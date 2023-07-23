@@ -18,6 +18,12 @@ class AnggotaController extends Controller
         return view('home.pemerintahandesa.indexanggota', compact('anggotas'));
     }
 
+    public function dataanggota()
+    {
+        $anggotas = Anggota::all();
+        return redirect()->route('anggota')->with('anggota', $anggotas);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

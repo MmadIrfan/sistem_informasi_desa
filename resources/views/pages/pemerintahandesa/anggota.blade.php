@@ -22,39 +22,40 @@
             </section>
             <!--/column -->
         </div>
-        @forelse ($anggotas as $anggota)
-            <!--/.row -->
-            <div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0">
-                <div class="col-md-6 col-lg-3">
-                    <div class="position-relative">
-                        <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
-                            style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0;">
-                        </div>
-                        <div class="card cardGuru mb-5">
 
+        <!--/.row -->
+        <div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0">
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
+                        style="right: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0;">
+                    </div>
+                    <div class="card cardGuru mb-5">
+                        @forelse ($anggotas as $anggota)
                             <figure class="card-img-top"><img class="lazyimage img-fluid"
                                     data-lazyimg="{{ Storage::url('public/anggota/') . $anggota->image }}"
-                                    alt="{{ $anggota->nama }}" />
+                                    alt="{{ $anggota->image }}" />
                             </figure>
                             <div class="card-body px-6 py-5">
                                 <h4 class="mb-1">{{ $anggota->nama }}</h4>
-                                <a>{!! $anggota->jabatan !!}</a>
+                                <a>{{ $anggota->jabatan }}</a>
                                 <p class="mb-0"></p>
                             </div>
-                            <!--/.card-body -->
-                        </div>
-                        <!-- /.card -->
+                        @empty
+                            <div class="alert alert-danger">
+                                Data Anggota belum Tersedia.
+                            </div>
+                        @endforelse
+                        <!--/.card-body -->
                     </div>
-                    <!-- /div -->
+                    <!-- /.card -->
                 </div>
-                <!--/column -->
+                <!-- /div -->
             </div>
-            <!--/.row -->
-        @empty
-            <div class="alert alert-danger">
-                Data Anggota belum Tersedia.
-            </div>
-        @endforelse
+            <!--/column -->
+        </div>
+        <!--/.row -->
+
     </div>
     <!-- /.container -->
 </section>

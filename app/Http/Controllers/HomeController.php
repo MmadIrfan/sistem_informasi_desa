@@ -58,7 +58,7 @@ class HomeController extends Controller
 
     public function anggota()
     {
-        $anggotas = Anggota::latest();
-        return view('pages.pemerintahandesa.anggota', compact('anggotas'));
+        $anggotas = Anggota::all();
+        return view('pages.pemerintahandesa.anggota', ['anggotas' => $anggotas]);
     }
 }
