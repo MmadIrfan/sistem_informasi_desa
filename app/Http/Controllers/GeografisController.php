@@ -16,14 +16,7 @@ class GeografisController extends Controller
         $geografis = Geografis::latest()->paginate(1);
         return view('home.gambaranumum.geografis.indexgeografis', compact('geografis'));
     }
-
-    public function datageografis()
-    {
-        $geografis = Geografis::all();
-        return redirect()->route('geografis')->with('geografis', $geografis);
-    }
-
-
+    
     /**
      * Show the form for creating a new resource.
      */

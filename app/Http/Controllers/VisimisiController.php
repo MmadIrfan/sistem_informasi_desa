@@ -16,14 +16,7 @@ class VisimisiController extends Controller
         $visimisis = Visimisi::latest()->paginate(1);
         return view('home.desa.visimisi.indexvisimisi', compact('visimisis'));
     }
-
-    public function datavisimisi()
-    {
-        $visimisis = Visimisi::all();
-        return redirect()->route('visimisi')->with('visimisi', $visimisis);
-    }
-
-
+    
     /**
      * Show the form for creating a new resource.
      */

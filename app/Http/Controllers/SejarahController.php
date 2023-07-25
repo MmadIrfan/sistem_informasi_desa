@@ -17,12 +17,6 @@ class SejarahController extends Controller
         return view('home.desa.sejarah.indexsejarah', compact('sejarahs'));
     }
 
-    public function datasejarah()
-    {
-        $sejarahs = Sejarah::all();
-        return redirect()->route('sejarah','')->with('sejarah', $sejarahs);
-    }
-
     /**
      * Show the form for creating a new resource.
      */

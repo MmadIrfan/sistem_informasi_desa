@@ -302,89 +302,25 @@
                         <div class="col-lg-4">
                             <h2 class="fs-15 text-uppercase text-muted mb-3">Tenaga kerja</h2>
                             <h3 class="display-5 mb-5">Anggota Pemerintah Desa</h3>
-                            <p>Sekolah kami memiliki banyak guru dengan berbagai jenis lulusan yang handal dan
-                                berkompeten dibidangnya masing-masing.</p>
-                            <a href="https://www.smkn1depok.sch.id/gtk/guru"
-                                class="btn btn-orange rounded-pill mt-3">Lihat Selengkapnya</a>
+                            <a href="/pemerintahandesa" class="btn btn-orange rounded-pill mt-3">Lihat
+                                Selengkapnya</a>
                         </div>
                         <!--/column -->
                         <div class="col-lg-8">
                             <div class="carousel owl-carousel text-center" data-margin="30" data-dots="true"
                                 data-autoplay="false" data-autoplay-timeout="5000"
                                 data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/2. Drs. Hisar Situmorang.jpg"
-                                        alt="Drs. HISAR SITUMORANG" loading="lazy" />
-                                    <h4 class="mb-1">Drs. HISAR SITUMORANG</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/3. Dra. nestri Puji Rahayu.jpg"
-                                        alt="NESTRI PUJI RAHAYU, S.Pd." loading="lazy" />
-                                    <h4 class="mb-1">NESTRI PUJI RAHAYU, S.Pd.</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/4. JULIANTI, S.Pd..jpg"
-                                        alt="JULIANTI, S.Pd." loading="lazy" />
-                                    <h4 class="mb-1">JULIANTI, S.Pd.</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/5. YULIA ROSSA, S.Pd., M.M.Pd..jpg"
-                                        alt="YULIA ROSSA, S.Pd., M.M.Pd." loading="lazy" />
-                                    <h4 class="mb-1">YULIA ROSSA, S.Pd., M.M.Pd.</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/6. SUMINAR BUDIJONO, S.T..jpg"
-                                        alt="SUMINAR BUDIJONO, S.T." loading="lazy" />
-                                    <h4 class="mb-1">SUMINAR BUDIJONO, S.T.</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/7. RIRIS LINTANGRIA BB, S.Pd..jpg"
-                                        alt="RIRIS LINTANGRIA BB, S.Pd." loading="lazy" />
-                                    <h4 class="mb-1">RIRIS LINTANGRIA BB, S.Pd.</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/8. GANIK SITI MURTIJAH, S.Pd..jpg"
-                                        alt="GANIK SITI MURTIJAH, S.Pd." loading="lazy" />
-                                    <h4 class="mb-1">GANIK SITI MURTIJAH, S.Pd.</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-                                <div class="item">
-                                    <img class="rounded-circle img-fluid  mx-auto mb-4 "
-                                        src="https://www.smkn1depok.sch.id/img/guru/9. ENDEN NURSIPAH, S.Pd..jpg"
-                                        alt="ENDEN NURSIPAH, S.Pd." loading="lazy" />
-                                    <h4 class="mb-1">ENDEN NURSIPAH, S.Pd.</h4>
-                                    <div class="meta mb-2"></div>
-                                    <p class="nim mb-2"></p>
-                                    <!-- /.social -->
-                                </div>
-
+                                @foreach ($anggotas as $anggota)
+                                    <div class="item">
+                                        <img class="rounded-circle img-fluid  mx-auto mb-4 "
+                                            src="{{ Storage::url('public/anggota/') . $anggota->image }}"
+                                            alt="{{ $anggota->nama }}" loading="lazy" />
+                                        <h4 class="mb-1">{{ $anggota->nama }}</h4>
+                                        <div class="meta mb-2"></div>
+                                        <p class="nim mb-2"></p>
+                                        <!-- /.social -->
+                                    </div>
+                                @endforeach
                             </div>
                             <!-- /.owl-carousel -->
                         </div>

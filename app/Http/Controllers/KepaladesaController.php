@@ -17,12 +17,6 @@ class KepaladesaController extends Controller
         return view('home.desa.kepaladesa.indexkepaladesa', compact('kepaladesas'));
     }
 
-    public function datakepaladesa()
-    {
-        $kepaladesas = Kepaladesa::all();
-        return redirect()->route('kepaladesa', '')->with('kepaladesa', $kepaladesas);
-    }
-
     /**
      * Show the form for creating a new resource.
      */
