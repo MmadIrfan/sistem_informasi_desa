@@ -186,9 +186,9 @@ class DatabaseSeeder extends Seeder
             
             <p>F. Produk Domestik Desa</p>
             
-            <p>&bull; Perttanian : 100 Ha.</p>
+            <p>&bull; Pertanian : 100 Ha.</p>
             
-            <p>&bull; Peternakan : 4 Kelompok</p>
+            <p>&bull; Perternakan : 4 Kelompok</p>
             
             <p>&bull; Perikanan : 4 Kelompok</p>
             
