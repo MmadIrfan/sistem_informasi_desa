@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Anggota;
+use App\Models\Demografis;
+use App\Models\Ekonomi;
+use App\Models\Geografis;
 use App\Models\Kepaladesa;
 use App\Models\Sejarah;
 use App\Models\Visimisi;
@@ -43,17 +46,20 @@ class HomeController extends Controller
 
     public function geografis()
     {
-        return view('pages.gambaranumum.geografis');
+        $geografis = Geografis::all();
+        return view('pages.gambaranumum.geografis',['geografis' => $geografis] );
     }
 
     public function demografis()
     {
-        return view('pages.gambaranumum.demografis');
+        $demografis = Demografis::all();
+        return view('pages.gambaranumum.demografis', ['demografis' => $demografis]);
     }
 
     public function kondisiekonomi()
     {
-        return view('pages.gambaranumum.kondisiekonomi');
+        $ekonomis = Ekonomi::all();
+        return view('pages.gambaranumum.kondisiekonomi', ['ekonomis' => $ekonomis]);
     }
 
     public function beritadesa()
@@ -63,7 +69,7 @@ class HomeController extends Controller
 
     public function anggota()
     {
-       $anggotas = Anggota::all();
+        $anggotas = Anggota::all();
         return view('pages.pemerintahandesa.anggota', ['anggotas' => $anggotas]);
     }
 }
