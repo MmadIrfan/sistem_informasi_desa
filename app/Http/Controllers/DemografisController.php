@@ -13,8 +13,14 @@ class DemografisController extends Controller
      */
     public function index()
     {
-        $demografiss = Demografis::latest();
-        return view('home.gambaranumum.demografis.indexdemografis', compact('demografiss'));
+        $demografis = Demografis::latest()->paginate(1);
+        return view('home.gambaranumum.demografis.indexdemografis', compact('demografis'));
+    }
+
+    public function datademografis()
+    {
+        $demografis = Demografis::all();
+        return redirect()->route('demografis')->with('demografis', $demografis);
     }
 
     /**
@@ -44,17 +50,33 @@ class DemografisController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Demografis $demografis)
+    public function edit($id)
     {
-        //
+        $demografis = Demografis::find($id);
+        return view('home.gambaranumum.demografis.editdemografis', compact('demografis'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Demografis $demografis)
+    public function update(Request $request, Demografis $demografis, $id)
     {
-        //
+        $this->validate($request, [
+            'isi'     => 'required'
+        ]);
+            $demografis = Demografis::find($id);
+            $demografis->update([
+                'isi'   => $request->isi
+            ]);
+
+        //redirect to index
+        if($demografis){
+            //redirect dengan pesan sukses
+            return redirect()->route('updatedemografis.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        }else{
+            //redirect dengan pesan error
+            return redirect()->route('updatedemografis.index')->with(['error' => 'Data Gagal Disimpan!']);
+        }
     }
 
     /**

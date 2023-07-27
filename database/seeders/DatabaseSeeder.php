@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Demografis;
+use App\Models\Ekonomi;
 use App\Models\Geografis;
 use App\Models\Kepaladesa;
 use App\Models\Sejarah;
@@ -85,6 +87,263 @@ class DatabaseSeeder extends Seeder
             <p>Sindangjawa yang secara geografis merupakan desa penyangga Ibu kota kabupaten yang seharusnya menjadi tampilan wajah (performance) Kabupaten Cirebon.</p>
             
             <p>Masyarakat Sindangjawa bermatapencarian petani, buruh tani, buruh harian lepas, buruh bangunan, karyawan swasta, wiraswasta, Pegawai Negeri Sipil, dan TNI/POLRI.</p>'
+        ]);
+
+        Demografis::create([
+            'isi' => '<p>A. Luas Wilayah</p>
+
+            <p>&bull; Luas Sindangjawa : 211,998 Ha</p>
+            
+            <p>&bull; Tanah Bengkok : 24 Ha</p>
+            
+            <p>&bull; Tanah Tegalan : 12 Ha</p>
+            
+            <p>&bull; Tanah Perkantoran/ Istansi &amp; Sarana Umum : 2,6 Ha</p>
+            
+            <p>Terdiri dari :</p>
+            
+            <p>1. Pekantoran : 0,5 Ha</p>
+            
+            <p>2. Pendidikan : 1,1 Ha</p>
+            
+            <p>3. Sarana Olah Raga : 1,0 Ha</p>
+            
+            <p>&bull; Tanah Kuburan : 1,4 Ha</p>
+            
+            <p>&bull; Tanah Darat : 95,998 Ha</p>
+            
+            <p>&bull; Tanah Sawah : 76 Ha</p>
+            
+            <p>Terdiri dari :</p>
+            
+            <p>1. Sawah Irigasi Teknis : 40 Ha</p>
+            
+            <p>2. Sawah Irigasi &frac12; Teknis : 24Ha</p>
+            
+            <p>3. Sawah Tadah Hujan : 12 Ha</p>
+            
+            <p>B. Batas Desa</p>
+            
+            <p>Utara : Desa Karangwagi Kecamatan Depok</p>
+            
+            <p>Timur : Kelurahan Kenanga dan Kelurahan Tukmudal Kecamatan Sumber</p>
+            
+            <p>Tenggara : Desa Sidawangi Kecamatan Sumber</p>
+            
+            <p>Selatan : Desa Cisaat Kecamatan Dukupuntang</p>
+            
+            <p>Barat : Desa Sindangmekar Kecamatan Dukupuntang</p>
+            
+            <p>C. Jalan dan Jembatan</p>
+            
+            <p>1. Panjang Jalan Provinsi : 2.500 m</p>
+            
+            <p>2. Panjang Jalan Provinsi : 800 m</p>
+            
+            <p>3. Panjang Jalan Desa : 4.760 m</p>
+            
+            <p>4. Jalan Tanah : 1.020 m</p>
+            
+            <p>5. Jembatan Beton : 3 buah</p>
+            
+            <p>D. Ekonomi Masyarakat</p>
+            
+            <p>1. Angkatan Kerja [ 19-55 th ] : 1258 Orang.</p>
+            
+            <p>2. Usia sekolah [ 7-18 th ] : 2260 Orang.</p>
+            
+            <p>3. Ibu Rumah tangga : 1347 Orang.</p>
+            
+            <p>4. Pekerja penuh : 1258 Orang.</p>
+            
+            <p>5. Pekerja yang tidak menentu : 1887 Orang.</p>
+            
+            <p>6. Rumah tangga Petani : 192 KK</p>
+            
+            <p>7. Anggota Rumah tangga petani : 452 Orang.</p>
+            
+            <p>8. Rumah tangga Buruh tani : 78 KK</p>
+            
+            <p>9. Anggota Rumah tangga buruh tani : 417 Orang.</p>
+            
+            <p>E. Profesi</p>
+            
+            <p>1. Petani : 192 Orang.</p>
+            
+            <p>2. Buruh Tani : 575 Orang.</p>
+            
+            <p>3. Buruh Harian Lepas : 192 Orang.</p>
+            
+            <p>4. Karyawan Swasta : 86 Orang.</p>
+            
+            <p>5. Wirasawasta : 165 Orang.</p>
+            
+            <p>6. PNS : 81 Orang.</p>
+            
+            <p>7. Pedagang : 121 Orang.</p>
+            
+            <p>8. Jasa lainnya : 182 Orang.</p>
+            
+            <p>F. Produk Domestik Desa</p>
+            
+            <p>&bull; Perttanian : 100 Ha.</p>
+            
+            <p>&bull; Peternakan : 4 Kelompok</p>
+            
+            <p>&bull; Perikanan : 4 Kelompok</p>
+            
+            <p>&bull; Perkebunan : 17Ha.</p>
+            
+            <p>&bull; Kerajinan Tangan : 3 pengrajin/pengusaha</p>
+            
+            <p>&bull; Kompeksi : 1Pengusaha</p>
+            
+            <p>&bull; Meubeler : 18 Pengrajin</p>
+            
+            <p>G. Pendidikan</p>
+            
+            <p>&bull; Sarana Pendidikan</p>
+            
+            <p>1. TK / Paud : 5 Buah</p>
+            
+            <p>2. SD / MD : 4 Buah</p>
+            
+            <p>3. SMP/MTs : 1 Buah</p>
+            
+            <p>4. Pesantren : 2 Buah</p>
+            
+            <p>&bull; Tamatan sekolah :</p>
+            
+            <p>- Tidak tamat SD : 146 Orang</p>
+            
+            <p>- Tamat SD : 599 Orang</p>
+            
+            <p>- Tamat SMP : 746 Orang</p>
+            
+            <p>- Tamat SMA : 595 Orang</p>
+            
+            <p>- D-1 : 22 Orang</p>
+            
+            <p>- S-1 : 197 Orang</p>
+            
+            <p>- S-2 : 23 Orang</p>
+            
+            <p>- S-3 : 4 Orang</p>
+            
+            <p>H. Wajib belajar 9 Tahun</p>
+            
+            <p>&bull; Usia 7 &ndash; 15 tahun : 1035 Jiwa</p>
+            
+            <p>&bull; Masih sekolah 7 &ndash; 15 tahun : 982 Jiwa</p>
+            
+            <p>&bull; Tidak sekolah 7 &ndash; 15 tahun : 53 Jiwa</p>
+            
+            <p>I. Kesehatan Masyarakat</p>
+            
+            <p>&bull; Bidan Desa : 1 Orang</p>
+            
+            <p>&bull; Balita : 260 Anak</p>
+            
+            <p>&bull; Balita Gizi Buruk : - Anak</p>
+            
+            <p>&bull; Balita Gizi Baik : 260 Anak</p>
+            
+            <p>&bull; Rumah tangga menggunakan air bersih : 1.347 Rumah tangga</p>
+            
+            <p>&bull; Rumah tangga menggunakan air sungai : - Rumah tangga</p>
+            
+            <p>J. Penduduk</p>
+            
+            <p>&bull; Kepala Rumah Tangga : 1.676 KK</p>
+            
+            <p>&bull; Penduduk : 5.578 Jiwa</p>
+            
+            <p>Terdiri dari :</p>
+            
+            <p>&bull; Laki-laki : 2.931 Jiwa</p>
+            
+            <p>&bull; Perempuan : 2.647 Jiwa</p>
+            
+            <p>K. Aparatur Pemerintahan Desa</p>
+            
+            <p>&bull; Perangkat Desa : 10 Orang</p>
+            
+            <p>&bull; BPD : 9 Orang</p>
+            
+            <p>&bull; RT : 41 RT</p>
+            
+            <p>&bull; RW : 8 Wilayah</p>
+            
+            <p>&bull; LPMD : 9 Orang</p>
+            
+            <p>&bull; LINMAS : 10 Anggota</p>
+            
+            <p>&bull; BKM : 7 Orang</p>
+            
+            <p>L. Sarana Umum</p>
+            
+            <p>&bull; Kantor Desa : 1 Unit</p>
+            
+            <p>&bull; KUA : 1 Buah</p>
+            
+            <p>&bull; Puskesmas : 1 Unit</p>
+            
+            <p>&bull; Puskesdes : 1 Unit</p>
+            
+            <p>&bull; Posyandu : 5 Unit</p>
+            
+            <p>&bull; Masjid Jami : 3 Buah</p>
+            
+            <p>&bull; Musholla : 25 Buah</p>
+            
+            <p>&bull; Lapangan Sepak Bola : 1 Buah</p>
+            
+            <p>&bull; Poskamling : 9 Buah</p>
+            
+            <p>&bull; Pemakaman Umum (TPU) : 5 Lokasi</p>'
+        ]);
+
+        Ekonomi::create([
+            'isi' => '<p>A. Potensi Unggulan Desa</p>
+
+            <p>Potensi Unggulan Ekonomi desa adalah sektor pertanian, terdapat lahan pertanian 100 Ha 40 % sawah irigasi teknis dan 48 % sawah irigasi non teknis, dari luas wilayah desa Sindangjawa 211,998 Ha, Peternakan, Perikanan, Perkebunan dan Kerajinan.</p>
+            
+            <p>B. Pertumbuhan Ekonomi Desa</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pertumbuhan perekonomian desa Sindangjawa akhir tahun 2019 ada peningkatan, dengan didirikannya BUMDes, masyarakat termotifasi dan tumbuh kasadaran untuk membentuk Koperasi dan kelompok-kelompok usaha lainnya, diantaranya Koperasi &ldquo;Bina Sejahtera&rdquo; yang digerakan oleh ibu-ibu PKK desa Sindangjawa dan 17 (tujuhbelas) kelompok tani yang terdiri dari kelompok tani pangan, kelompok ternak, kelompok unggas, kelompok perikanan dan kelompok pedagang bakulan yang tergabung dalam gabungan kelompok tani &ldquo;Sidabangkit Jaya&rdquo;</p>
+            
+            <p>Desa Sindangjawa memiliki potensi unggulan ekonomi masyarakat, disamping potensi pertanian yang sangat dominan ada pula potensi-potensi lain yang menjadi produk andalan Desa Sindangjawa, sebagai berikut :</p>
+            
+            <p>1. Koperasi : Berkah Sejahtera. Sikado</p>
+            
+            <p>2. Kerajinan :</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Rattan : PT. Romana Wicker</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Meubeler : Sagung Jaya, H. Carsina, Waluyo, Ubaidilah, Suherman dan lainnya</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Sankar Burung : Abdurohman</p>
+            
+            <p>3. Konveksi : Sdr. Kholid</p>
+            
+            <p>4. Peternakan :</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. Sapi Potong : Sdr.H. Abdul Rouf, Barnawi, Sapi&rsquo;I dan Suari</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. Kambing/Domba : Kelompok Cikembang, Pontas Sari dan 28 Peternak lainnya.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. Ayam : Gunawang, Widodo, Sukanta</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d. Itik : Sdr. Sunadi</p>
+            
+            <p>5. Perikanan : Kelompok Budi Mulya, Cigoek Fish. Mina Taruna, Sinar Mas</p>
+            
+            <p>6. Perkebunan : Sindangjawa Lestari</p>
+            
+            <p>7. Pedagang Kecil : 245 Pedagang</p>
+            
+            <p>8. Rumah Makan : Istana Sop Patin. Warung Nasi Sederhana</p>
+            '
         ]);
 
     }
