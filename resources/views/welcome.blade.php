@@ -302,6 +302,8 @@
                         <div class="col-lg-4">
                             <h2 class="fs-15 text-uppercase text-muted mb-3">Tenaga kerja</h2>
                             <h3 class="display-5 mb-5">Anggota Pemerintah Desa</h3>
+                            <p>Desa kami memiliki banyak anggota dengan berbagai jenis lulusan yang handal dan
+                                berkompeten dibidangnya masing-masing.</p>
                             <a href="/pemerintahandesa" class="btn btn-orange rounded-pill mt-3">Lihat
                                 Selengkapnya</a>
                         </div>
@@ -478,7 +480,7 @@
                                             <div class="mapouter">
                                                 <div class="gmap_canvas"><iframe width="100%" height="100%"
                                                         id="gmap_canvas"
-                                                        src="https://maps.google.com/maps?q=sindangjawa&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15848.190641509698!2d108.44129027966677!3d-6.764043583220952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1fa29c445767%3A0xd2db1107d3cbfc7!2sSindangjawa%2C%20Kec.%20Dukupuntang%2C%20Kabupaten%20Cirebon%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1690134869923!5m2!1sid!2sid"
                                                         frameborder="0" scrolling="no" marginheight="0"
                                                         marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br>
                                                     <style>
