@@ -149,7 +149,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="">Pengumuman</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pengumuman">Pengumuman</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pemerintahandesa">Pemerintahan Desa</a></li>
                     <li class="nav-item"><a class="nav-link" href="">Galeri</a></li>
 

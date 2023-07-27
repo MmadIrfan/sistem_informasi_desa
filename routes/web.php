@@ -9,6 +9,7 @@ use App\Http\Controllers\DemografisController;
 use App\Http\Controllers\EkonomiController;
 use App\Http\Controllers\GeografisController;
 use App\Http\Controllers\KepaladesaController;
+use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\VisimisiController;
 
@@ -30,6 +31,7 @@ Route::get('/sambutan', [HomeController::class,'kepaladesa']);
 Route::get('/geografis', [HomeController::class,'geografis']);
 Route::get('/demografis', [HomeController::class,'demografis']);
 Route::get('/kondisiekonomi', [HomeController::class,'kondisiekonomi']);
+Route::get('/pengumuman', [HomeController::class,'pengumuman']);
 Route::get('/pemerintahandesa', [HomeController::class,'anggota']);
 
 //Auth
@@ -47,4 +49,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('updatedemografis', DemografisController::class);
     Route::resource('updateekonomi', EkonomiController::class);
     Route::resource('updateanggota', AnggotaController::class);
+    Route::resource('updatepengumuman', PengumumanController::class);
 });

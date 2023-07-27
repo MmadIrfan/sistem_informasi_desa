@@ -32083,7 +32083,7 @@ fieldset:disabled .btn.btn-circle {
     vertical-align: 0.1rem;
     border: 0 !important;
     font-size: 0.25rem;
-    color: #3f78e0;
+    color: orangered;
 }
 
 .navbar.caret-none .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow {
@@ -32098,7 +32098,7 @@ fieldset:disabled .btn.btn-circle {
     .navbar-nav:not(.sm-collapsible)
     .nav-link
     .sub-arrow {
-    color: #3f78e0;
+    color: orangered;
 }
 
 .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow + .sub-arrow {
@@ -32140,7 +32140,7 @@ fieldset:disabled .btn.btn-circle {
     margin-left: 0.2rem;
     vertical-align: 0.15rem;
     content: "\e900";
-    color: #3f78e0;
+    color: orangered;
 }
 
 @media (max-width: 991.98px) {
@@ -32449,8 +32449,8 @@ fieldset:disabled .btn.btn-circle {
 }
 
 .navbar-dark:not([class*="navbar-bg-"]).fixed .btn {
-    background: #3f78e0;
-    border-color: #3f78e0;
+    background: orangered;
+    border-color: orangered;
     color: #fff;
 }
 
@@ -32590,7 +32590,7 @@ fieldset:disabled .btn.btn-circle {
 .banner--stick:not(.navbar-dark).navbar-dark .nav-link:focus,
 .banner--stick.transparent.navbar-dark .nav-link:hover,
 .banner--stick.transparent.navbar-dark .nav-link:focus {
-    color: #3f78e0;
+    color: orangered;
 }
 
 .banner--stick:not(.navbar-dark).navbar-dark .nav-link.disabled,
@@ -32869,7 +32869,7 @@ button.hamburger.animate.active:after {
     border: 0;
     font-size: 0.85rem;
     font-weight: 700;
-    color: #3f78e0;
+    color: orangered;
     transition: all 150ms ease-in-out;
     background: none;
 }
@@ -32888,7 +32888,7 @@ button.hamburger.animate.active:after {
     width: 1rem;
     display: inline-block;
     margin-top: 0.4rem;
-    color: #3f78e0;
+    color: orangered;
     position: absolute;
     left: 1.3rem;
 }
@@ -32902,7 +32902,7 @@ button.hamburger.animate.active:after {
 }
 
 .accordion-wrapper .card-header button:hover {
-    color: #3f78e0;
+    color: orangered;
 }
 
 .accordion-wrapper .card-body {
@@ -33686,7 +33686,7 @@ button.hamburger.animate.active:after {
     text-align: center;
     line-height: 2.3rem;
     font-size: 1.2rem;
-    color: #3f78e0;
+    color: orangered;
     left: 0;
     top: 0;
     height: 2.3rem;
@@ -33708,7 +33708,7 @@ button.hamburger.animate.active:after {
 }
 
 .progress-wrap svg.progress-circle path {
-    stroke: #3f78e0;
+    stroke: orangered;
     stroke-width: 4;
     box-sizing: border-box;
     transition: all 200ms linear;

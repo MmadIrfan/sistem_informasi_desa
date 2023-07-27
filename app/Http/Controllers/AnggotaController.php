@@ -33,7 +33,7 @@ class AnggotaController extends Controller
     {
         $this->validate($request, [
             'image'     => 'required|image|mimes:png,jpg,jpeg|max:2048',
-            'nama'     => 'required',
+            'nama'      => 'required',
             'jabatan'   => 'required'
         ]);
     
@@ -43,7 +43,7 @@ class AnggotaController extends Controller
     
         $anggota = Anggota::create([
             'image'     => $image->hashName(),
-            'nama'     => $request->nama,
+            'nama'      => $request->nama,
             'jabatan'   => $request->jabatan
         ]);
     
