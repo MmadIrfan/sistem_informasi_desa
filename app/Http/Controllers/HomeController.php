@@ -8,6 +8,7 @@ use App\Models\Demografis;
 use App\Models\Ekonomi;
 use App\Models\Geografis;
 use App\Models\Kepaladesa;
+use App\Models\Pengumuman;
 use App\Models\Sejarah;
 use App\Models\Visimisi;
 use Illuminate\Http\Request;
@@ -17,10 +18,12 @@ class HomeController extends Controller
     public function index()
     {
         $sejarahs = Sejarah::all();
+        $pengumumen = Pengumuman::all();
         $kepaladesas = Kepaladesa::all();
         $anggotas = Anggota::all();
         return view('welcome',[
             'sejarahs' => $sejarahs,
+            'pengumumen' =>$pengumumen,
             'kepaladesas' => $kepaladesas,
             'anggotas' => $anggotas,
         ]);
@@ -62,9 +65,15 @@ class HomeController extends Controller
         return view('pages.gambaranumum.kondisiekonomi', ['ekonomis' => $ekonomis]);
     }
 
-    public function beritadesa()
+    public function pengumuman()
     {
-        return view('pages.berita.beritadesa');
+        $pengumumen = Pengumuman::all();
+        return view('pages.pengumuman.pengumuman', ['pengumumen' =>$pengumumen]);
+    }
+
+    public function detailpengumuman()
+    {
+        return view('pages.pengumuman.detailpengumuman');
     }
 
     public function anggota()
@@ -72,4 +81,6 @@ class HomeController extends Controller
         $anggotas = Anggota::all();
         return view('pages.pemerintahandesa.anggota', ['anggotas' => $anggotas]);
     }
+
+    
 }

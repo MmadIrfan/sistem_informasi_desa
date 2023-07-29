@@ -58,187 +58,56 @@
                         </div>
                     </div>
 
-                    <!-- berita -->
+                    <!-- Pengumuman -->
                     <section class="wrapper bg-light angled upper-end">
                         <div class="container py-14 py-md-16">
                             <div class="row">
                                 <div class="col-lg-9 col-xl-8 col-xxl-7">
-                                    <h2 class="fs-16 text-uppercase text-line text-orange mb-3">Berita</h2>
-                                    <a href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah">
-                                        <h3 class="display-4 mb-9">Berita Terbaru Desa Sindangjawa</h3>
+                                    <h2 class="fs-16 text-uppercase text-line text-orange mb-3">Pengumuman</h2>
+                                    <a href="/pengumuman">
+                                        <h3 class="display-4 mb-9">Pengumuman Terbaru Desa Sindangjawa</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="carousel owl-carousel blog grid-view mb-10" data-margin="30" data-dots="true"
                                 data-autoplay="false" data-autoplay-timeout="5000"
                                 data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
-                                <div class="item">
-                                    <article>
-                                        <figure class="overlay overlay1 hover-scale rounded mb-6"><a
-                                                href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/workshop-pkdk">
-                                                <img class="lazyimage"
-                                                    data-lazyimg="https://www.smkn1depok.sch.id/img/berita/workshop-pkdk_1640283105_workshop-pkdk-thumb.jpg"
-                                                    alt="Workshop PKDK" /></a>
-                                            <figcaption>
-                                                <h5 class="from-top mb-0">Baca Selengkapnya</h5>
+                                @foreach ($pengumumen as $pengumuman)
+                                    <div class="item">
+                                        <article>
+                                            <figure class="overlay overlay1 hover-scale rounded mb-6"><a
+                                                    href="{{ route('updatepengumuman.show', $pengumuman->id) }}">
+                                                    <img class="lazyimage"
+                                                        data-lazyimg="{{ Storage::url('public/pengumuman/') . $pengumuman->image }}"
+                                                        alt="{{ $pengumuman->judul }}" /></a>
+                                                <figcaption>
+                                                    <h5 class="from-top mb-0">Baca Selengkapnya</h5>
 
-                                            </figcaption>
-                                        </figure>
-                                        <div class="post-header">
-                                            <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                    href=" https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/workshop-pkdk ">Workshop
-                                                    PKDK</a></h2>
-                                        </div>
-                                        <!-- /.post-header -->
-                                        <div class="post-footer">
-                                            <ul class="post-meta">
-                                                <li class="post-date"><i
-                                                        class="uil uil-calendar-alt"></i><span>2021-12-23
-                                                        18:11:46</span></li>
-                                                <li class="post-comments"><a href="#"><i
-                                                            class="uil uil-file-alt fs-15"></i>Event</a></li>
-                                            </ul>
-                                            <!-- /.post-meta -->
-                                        </div>
-                                        <!-- /.post-footer -->
-                                    </article>
-                                    <!-- /article -->
-                                </div>
+                                                </figcaption>
+                                            </figure>
+                                            <div class="post-header">
+                                                <h2 class="post-title h3 mb-3"><a class="link-dark"
+                                                        href=" {{ route('updatepengumuman.show', $pengumuman->id) }} ">{{ $pengumuman->judul }}</a>
+                                                </h2>
+                                            </div>
+                                            <!-- /.post-header -->
+                                            <div class="post-footer">
+                                                <ul class="post-meta">
+                                                    <li class="post-date"><i
+                                                            class="uil uil-calendar-alt"></i><span>{{ $pengumuman->created_at }}</span>
+                                                    </li>
+                                                    <li class="post-comments"><a href="#"><i
+                                                                class="uil uil-file-alt fs-15"></i>{{ str_replace('_', ' ', $pengumuman->kategori) }}</a>
+                                                    </li>
+                                                </ul>
+                                                <!-- /.post-meta -->
+                                            </div>
+                                            <!-- /.post-footer -->
+                                        </article>
+                                        <!-- /article -->
+                                    </div>
+                                @endforeach
                                 <!-- /.item -->
-                                <div class="item">
-                                    <article>
-                                        <figure class="overlay overlay1 hover-scale rounded mb-6"><a
-                                                href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/rapat-luring-dalam-kantor">
-                                                <img class="lazyimage"
-                                                    data-lazyimg="https://www.smkn1depok.sch.id/img/berita/rapat-luring-dalam-kantor_1640283800_rapat-luring-dalam-kantor-thumb.jpg"
-                                                    alt="Rapat Luring dalam Kantor" /></a>
-                                            <figcaption>
-                                                <h5 class="from-top mb-0">Baca Selengkapnya</h5>
-
-                                            </figcaption>
-                                        </figure>
-                                        <div class="post-header">
-                                            <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                    href=" https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/rapat-luring-dalam-kantor ">Rapat
-                                                    Luring dalam Kantor</a></h2>
-                                        </div>
-                                        <!-- /.post-header -->
-                                        <div class="post-footer">
-                                            <ul class="post-meta">
-                                                <li class="post-date"><i
-                                                        class="uil uil-calendar-alt"></i><span>2021-12-23
-                                                        18:23:20</span></li>
-                                                <li class="post-comments"><a href="#"><i
-                                                            class="uil uil-file-alt fs-15"></i>General</a></li>
-                                            </ul>
-                                            <!-- /.post-meta -->
-                                        </div>
-                                        <!-- /.post-footer -->
-                                    </article>
-                                    <!-- /article -->
-                                </div>
-                                <!-- /.item -->
-                                <div class="item">
-                                    <article>
-                                        <figure class="overlay overlay1 hover-scale rounded mb-6"><a
-                                                href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/pelatihan-penerapan-budaya-kerja-industri">
-                                                <img class="lazyimage"
-                                                    data-lazyimg="https://www.smkn1depok.sch.id/img/berita/pelatihan-penerapan-budaya-kerja-industri_1640300052_pelatihan-penerapan-budaya-kerja-industri-thumb.jpg"
-                                                    alt="Pelatihan Penerapan Budaya Kerja Industri" /></a>
-                                            <figcaption>
-                                                <h5 class="from-top mb-0">Baca Selengkapnya</h5>
-
-                                            </figcaption>
-                                        </figure>
-                                        <div class="post-header">
-                                            <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                    href=" https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/pelatihan-penerapan-budaya-kerja-industri ">Pelatihan
-                                                    Penerapan Budaya Kerja Industri</a></h2>
-                                        </div>
-                                        <!-- /.post-header -->
-                                        <div class="post-footer">
-                                            <ul class="post-meta">
-                                                <li class="post-date"><i
-                                                        class="uil uil-calendar-alt"></i><span>2021-12-23
-                                                        22:54:12</span></li>
-                                                <li class="post-comments"><a href="#"><i
-                                                            class="uil uil-file-alt fs-15"></i>Event</a></li>
-                                            </ul>
-                                            <!-- /.post-meta -->
-                                        </div>
-                                        <!-- /.post-footer -->
-                                    </article>
-                                    <!-- /article -->
-                                </div>
-                                <!-- /.item -->
-                                <div class="item">
-                                    <article>
-                                        <figure class="overlay overlay1 hover-scale rounded mb-6"><a
-                                                href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/peringatan-hari-guru-2021">
-                                                <img class="lazyimage"
-                                                    data-lazyimg="https://www.smkn1depok.sch.id/img/berita/peringatan-hari-guru-2021_1640300572_hari-guru-21-thumb.jpg"
-                                                    alt="Peringatan Hari Guru 2021" /></a>
-                                            <figcaption>
-                                                <h5 class="from-top mb-0">Baca Selengkapnya</h5>
-
-                                            </figcaption>
-                                        </figure>
-                                        <div class="post-header">
-                                            <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                    href=" https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/peringatan-hari-guru-2021 ">Peringatan
-                                                    Hari Guru 2021</a></h2>
-                                        </div>
-                                        <!-- /.post-header -->
-                                        <div class="post-footer">
-                                            <ul class="post-meta">
-                                                <li class="post-date"><i
-                                                        class="uil uil-calendar-alt"></i><span>2021-12-23
-                                                        23:02:52</span></li>
-                                                <li class="post-comments"><a href="#"><i
-                                                            class="uil uil-file-alt fs-15"></i>Hari Peringatan</a></li>
-                                            </ul>
-                                            <!-- /.post-meta -->
-                                        </div>
-                                        <!-- /.post-footer -->
-                                    </article>
-                                    <!-- /article -->
-                                </div>
-                                <!-- /.item -->
-                                <div class="item">
-                                    <article>
-                                        <figure class="overlay overlay1 hover-scale rounded mb-6"><a
-                                                href="https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/workshop-penelusuran-tamatan">
-                                                <img class="lazyimage"
-                                                    data-lazyimg="https://www.smkn1depok.sch.id/img/berita/workshop-penelusuran-alumni_1640301246_workshop-penelusuran-alumni-thumb.jpg"
-                                                    alt="Workshop Penelusuran Tamatan" /></a>
-                                            <figcaption>
-                                                <h5 class="from-top mb-0">Baca Selengkapnya</h5>
-
-                                            </figcaption>
-                                        </figure>
-                                        <div class="post-header">
-                                            <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                    href=" https://www.smkn1depok.sch.id/index/berita/berita-sekolah/read/workshop-penelusuran-tamatan ">Workshop
-                                                    Penelusuran Tamatan</a></h2>
-                                        </div>
-                                        <!-- /.post-header -->
-                                        <div class="post-footer">
-                                            <ul class="post-meta">
-                                                <li class="post-date"><i
-                                                        class="uil uil-calendar-alt"></i><span>2021-12-23
-                                                        23:14:06</span></li>
-                                                <li class="post-comments"><a href="#"><i
-                                                            class="uil uil-file-alt fs-15"></i>General</a></li>
-                                            </ul>
-                                            <!-- /.post-meta -->
-                                        </div>
-                                        <!-- /.post-footer -->
-                                    </article>
-                                    <!-- /article -->
-                                </div>
-                                <!-- /.item -->
-
-
                             </div>
                         </div>
                     </section>
@@ -302,6 +171,8 @@
                         <div class="col-lg-4">
                             <h2 class="fs-15 text-uppercase text-muted mb-3">Tenaga kerja</h2>
                             <h3 class="display-5 mb-5">Anggota Pemerintah Desa</h3>
+                            <p>Desa kami memiliki banyak anggota dengan berbagai jenis lulusan yang handal dan
+                                berkompeten dibidangnya masing-masing.</p>
                             <a href="/pemerintahandesa" class="btn btn-orange rounded-pill mt-3">Lihat
                                 Selengkapnya</a>
                         </div>
@@ -478,7 +349,7 @@
                                             <div class="mapouter">
                                                 <div class="gmap_canvas"><iframe width="100%" height="100%"
                                                         id="gmap_canvas"
-                                                        src="https://maps.google.com/maps?q=sindangjawa&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15848.190641509698!2d108.44129027966677!3d-6.764043583220952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1fa29c445767%3A0xd2db1107d3cbfc7!2sSindangjawa%2C%20Kec.%20Dukupuntang%2C%20Kabupaten%20Cirebon%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1690134869923!5m2!1sid!2sid"
                                                         frameborder="0" scrolling="no" marginheight="0"
                                                         marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br>
                                                     <style>

@@ -81,21 +81,21 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="updatevisimisi"
+                                    <a href="/updatevisimisi"
                                         class="nav-link {{ Request::is('updatevisimisi*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Visi Misi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="updatesejarah"
+                                    <a href="/updatesejarah"
                                         class="nav-link {{ Request::is('updatesejarah*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Sejarah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="updatekepaladesa"
+                                    <a href="/updatekepaladesa"
                                         class="nav-link {{ Request::is('updatekepaladesa*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Kepala desa</p>
@@ -115,21 +115,21 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="updategeografis"
+                                    <a href="/updategeografis"
                                         class="nav-link {{ Request::is('updategeografis*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Kondisi Geografis</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="updatedemografis"
+                                    <a href="/updatedemografis"
                                         class="nav-link {{ Request::is('updatedemografis*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Demografis</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="updateekonomi"
+                                    <a href="/updateekonomi"
                                         class="nav-link {{ Request::is('updateekonomi*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Kondisi Ekonomi</p>
@@ -137,29 +137,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item menu">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-newspaper"></i>
-                                <p>
-                                    Berita
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="./index.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Berita Desa</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./index2.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Pengumuman</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
                         <li class="nav-item menu">
                             <a href="#" class="nav-link">
                                 <i class="fas fa-table"></i>
@@ -184,7 +162,16 @@
                             </ul>
                         </li>
                         <li class="nav-item menu">
-                            <a href="updateanggota"
+                            <a href="/updatepengumuman"
+                                class="nav-link {{ Request::is('updatepengumuman*') ? 'active' : '' }}">
+                                <i class="fas fa-bullhorn"></i>
+                                <p>
+                                    Pengumuman
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu">
+                            <a href="/updateanggota"
                                 class="nav-link {{ Request::is('updateanggota*') ? 'active' : '' }}">
                                 <i class="fas fa-building"></i>
                                 <p>

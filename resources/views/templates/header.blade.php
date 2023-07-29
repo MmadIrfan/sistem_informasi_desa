@@ -18,33 +18,10 @@
     <meta content="Sindangjawa adalah desa di kecamatan Dukupuntang, Cirebon, Jawa Barat, Indonesia."
         name="description">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async=""
-        src="https://www.googletagmanager.com/gtag/js?id=G-CHB1CQJRHH&amp;l=dataLayer&amp;cx=c"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143782567-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-143782567-1');
-    </script>
-    <!-- Web Application Manifest -->
-
-    <!-- Chrome for Android theme color -->
-
-    <!-- Add to homescreen for Chrome on Android -->
-
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/sistem_informasi_desa/resources/css/landingcss/plugins.css">
-    <link rel="stylesheet" href="http://localhost/sistem_informasi_desa/resources/css/landingcss/style.css">
-    <link rel="preload" href="http://localhost/sistem_informasi_desa/resources/css/landingcss/fonts/dm.css"
+    <link rel="stylesheet" href="http://localhost/sistem_informasi_desa/resources/assets/css/landingcss/plugins.css">
+    <link rel="stylesheet" href="http://localhost/sistem_informasi_desa/resources/assets/css/landingcss/style.css">
+    <link rel="preload" href="http://localhost/sistem_informasi_desa/resources/assets/css/landingcss/fonts/dm.css"
         as="style" onload="this.rel='stylesheet'">
     <style>
         img.lazy {
@@ -165,14 +142,6 @@
                     </li>
 
                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
-                            href="javaScript:void(0)">Berita</a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="dropdown-item" href="/beritadesa">Berita Desa</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="">Pengumuman</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
                             href="javaScript:void(0)">Lembaga</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="">PKK</a></li>
@@ -180,6 +149,7 @@
                         </ul>
                     </li>
 
+                    <li class="nav-item"><a class="nav-link" href="/pengumuman">Pengumuman</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pemerintahandesa">Pemerintahan Desa</a></li>
                     <li class="nav-item"><a class="nav-link" href="">Galeri</a></li>
 
