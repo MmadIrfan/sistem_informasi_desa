@@ -33,9 +33,11 @@
                                     <div class="classic-view">
                                         <article class="post">
                                             <div class="post-content mb-5">
-                                                    <p>Desa Sindangjawa berada di wilayah kecamatan Dukupuntang kabupaten Cirebon Provinsi Jawa Barat di ketinggian 105 meter dari permukaan laut dengan luas wilayah 211,998 Ha. Terbagi dalam 5(lima) Rukun Warga(RW) dan 41 (empatpuluhsatu) Rukun Tetangga(RT) masyarakatnya sebagian besar petani yang mengandalkan lahan pertanian 100 Ha, dari luas desa Sindangjawa 211,998 Ha. Kurang lebih 4(empat)km sebelah barat ibu kota Kecamatan Dukupuntang.<br>
-                                                    <br>Sindangjawa yang secara geografis merupakan desa penyangga Ibu kota kabupaten yang seharusnya menjadi tampilan wajah (performance) Kabupaten Cirebon.<br>
-                                                    <br>Masyarakat Sindangjawa bermatapencarian petani, buruh tani, buruh harian lepas, buruh bangunan, karyawan swasta, wiraswasta, Pegawai Negeri Sipil, dan TNI/POLRI.</p>
+                                                @foreach ($geografis as $data)
+                                                <p>
+                                                    {!! $data->isi !!}
+                                                </p>
+                                                @endforeach
                                                 </div>
                                             </article>
                                     </div>
