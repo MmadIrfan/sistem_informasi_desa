@@ -385,8 +385,7 @@
                                                     <div class="align-self-start justify-content-start">
                                                         <h5 class="mb-1" id="alamat">Alamat</h5>
                                                         <address>
-                                                            Gang Bhakti Suci No.100, Cimpaeun, Tapos, Kota Depok, Jawa
-                                                            Barat, 16459
+                                                            Sindangjawa, Dukupuntang, Cirebon
                                                         </address>
                                                     </div>
                                                 </div>
