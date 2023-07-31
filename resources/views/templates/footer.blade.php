@@ -15,10 +15,10 @@
             <div class="col-md-4 col-lg-4 offset-lg-2">
                 <div class="widget">
                     <h4 class="widget-title text-white mb-3">Contact Us</h4>
-                    <address id="address">Gang Bhakti Suci No.100, Cimpaeun, Tapos, Kota Depok, Jawa Barat, 16459
+                    <address id="address">Sindangjawa, Dukupuntang, Cirebon
                     </address>
-                    <a id="_email" href="mailto:smkn1depok@gmail.com">smkn1depok@gmail.com</a><br />
-                    <a id="_phone" href="tel:021-8790-7233">021-8790-7233</a>
+                    <a id="_email" href="mailto:sindangjawa@gmail.com">sindangjawa@gmail.com</a><br />
+                    <a id="_phone" href="tel:012-345-678">012-345-678</a>
                 </div>
                 <nav class="nav social social-white">
                     <a href=""><i class="uil uil-twitter"></i></a>
@@ -124,17 +124,4 @@
             });
         }
     })();
-    $(document).ready(function() {
-        $.ajax({
-            type: "GET",
-            url: "",
-            dataType: 'json',
-            success: function(data) {
-                $("#address").text(data.alamat[0].isi);
-                $("#_email").text(data.email[0].isi);
-                $("#_phone").text(data.telepon[0].isi);
-
-            }
-        });
-    });
 </script>

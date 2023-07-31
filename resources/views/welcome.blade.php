@@ -50,7 +50,7 @@
                             <h3 class="display-4 mb-6">Tentang Desa Sindangjawa</h3>
                             @foreach ($sejarahs as $sejarah)
                                 <p class="mb-6">
-                                    {!! substr($sejarah->content, 45, 312) !!}
+                                    {!! substr($sejarah->content, 45, 330) !!}...
                                 </p>
                             @endforeach
                             <a href="/sejarah">Baca Selengkapnya</a>
@@ -126,7 +126,7 @@
                             <h3 class="display-4 mb-6">H. E. Kasturi</h3>
                             @foreach ($kepaladesas as $kepaladesa)
                                 <p class="mb-6">
-                                    {!! substr($kepaladesa->sambutan, 46, 660) !!}
+                                    {!! substr($kepaladesa->sambutan, 46, 662) !!}...
                                 </p>
                             @endforeach
                             <a href="/sambutan">Baca Selengkapnya</a>
@@ -139,7 +139,7 @@
                             <div class="row">
                                 <div class="col-xl-12 mx-auto">
                                     <div class="card image-wrapper bg-full bg-image bg-overlay"
-                                        data-image-src="https://www.smkn1depok.sch.id/assets/images/bg-themes/bg3.webp">
+                                        data-image-src="https://localhost/sistem_informasi_desa/resources/assets/images/bg.jpg">
                                         <div class="card-body p-9 p-xl-10">
                                             <div
                                                 class="row align-items-center counter-wrapper gy-4 text-center text-white">
@@ -400,11 +400,10 @@
                                                     <div>
                                                         <h5 class="mb-1">Telepon</h5>
                                                         <p>
-                                                            <a href="tel:021-8790-7233" class="link-body"
-                                                                id="_phone">021-8790-7233 (Call)</a><br>
-                                                            <a href="https://wa.me/6287744450066" class="link-body"
-                                                                id="tel">
-                                                                0877444450066 (Only Chat WhatsApp) <i
+                                                            <a href="tel:012-345-678" class="link-body">012-345-678
+                                                                (Call)</a><br>
+                                                            <a href="https://wa.me/6289364334274" class="link-body">
+                                                                089364334274 (Only Chat WhatsApp) <i
                                                                     class="uil uil-whatsapp"></i>
                                                             </a>
                                                         </p>
@@ -420,9 +419,8 @@
                                                     <div>
                                                         <h5 class="mb-1">E-mail</h5>
                                                         <p class="mb-0">
-                                                            <a href="mailto:smkn1depok@gmail.com" class="link-body"
-                                                                id="_email">
-                                                                smkn1depok@gmail.com
+                                                            <a href="mailto:sindangjawa@gmail.com" class="link-body">
+                                                                sindangjawa@gmail.com
                                                             </a>
                                                         </p>
                                                     </div>
@@ -437,9 +435,9 @@
                                                     <div>
                                                         <h5 class="mb-1">Instagram</h5>
                                                         <p class="mb-0">
-                                                            <a href="https://www.instagram.com/officialsmkn1depok/"
+                                                            <a href="https://www.instagram.com/officialsindangjawa/"
                                                                 class="link-body">
-                                                                officialsmkn1depok
+                                                                officialsindangjawa
                                                             </a>
                                                         </p>
                                                     </div>
@@ -454,9 +452,9 @@
                                                     <div>
                                                         <h5 class="mb-1">Youtube</h5>
                                                         <p class="mb-0">
-                                                            <a href="https://www.youtube.com/c/OfficialSMKN1Depok"
+                                                            <a href="https://www.youtube.com/c/OfficialSindangjawa"
                                                                 class="link-body" id="yt">
-                                                                OfficialSMKN1Depok
+                                                                OfficialSindangjawa
                                                             </a>
                                                         </p>
                                                     </div>

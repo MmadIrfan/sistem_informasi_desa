@@ -65,11 +65,6 @@ class HomeController extends Controller
         return view('pages.pengumuman.pengumuman', ['pengumumen' =>$pengumumen]);
     }
 
-    public function detailpengumuman()
-    {
-        return view('pages.pengumuman.detailpengumuman');
-    }
-
     public function anggota()
     {
        $anggotas = Anggota::all();

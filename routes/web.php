@@ -40,6 +40,7 @@ Route::post('/login', [AuthController::class,'authenticated']);
 Route::get('/logout', [AuthController::class,'logout']);
 
 //Dashboard
+Route::get('pengumuman/detail/{pengumuman}', [PengumumanController::class, 'show'])->name('updatepengumuman.show');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin', [DashboardController::class,'index']);
     Route::resource('updatevisimisi', VisimisiController::class);
@@ -49,5 +50,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('updatedemografis', DemografisController::class);
     Route::resource('updateekonomi', EkonomiController::class);
     Route::resource('updateanggota', AnggotaController::class);
-    Route::resource('updatepengumuman', PengumumanController::class);
+    Route::resource('updatepengumuman', PengumumanController::class)->except(['show']);
 });

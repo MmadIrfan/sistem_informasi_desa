@@ -65,7 +65,7 @@ class PengumumanController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Pengumuman $pengumuman, $id)
+    public function show(Request $request, $id)
     {
         $pengumuman = Pengumuman::findOrFail($id);
         return view('pages.pengumuman.detailpengumuman', compact('pengumuman'));
