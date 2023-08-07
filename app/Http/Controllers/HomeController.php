@@ -19,6 +19,7 @@ class HomeController extends Controller
     {
         $sejarahs = Sejarah::all();
         $pengumumen = Pengumuman::all();
+        $pengumumen = Pengumuman::orderBy('created_at', 'desc')->get();
         $kepaladesas = Kepaladesa::all();
         $anggotas = Anggota::all();
         return view('welcome',[
@@ -68,6 +69,7 @@ class HomeController extends Controller
     public function pengumuman()
     {
         $pengumumen = Pengumuman::all();
+        $pengumumen = Pengumuman::orderBy('created_at', 'desc')->get();
         return view('pages.pengumuman.pengumuman', ['pengumumen' =>$pengumumen]);
     }
 

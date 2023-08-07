@@ -40,7 +40,7 @@
                                     href="{{ route('updatepengumuman.show', $pengumuman->id) }}">
                                     <img class="lazyimage"
                                         data-lazyimg="{{ Storage::url('public/pengumuman/') . $pengumuman->image }}"
-                                        alt="{{ $pengumuman->judul }}" /></a>
+                                        alt="{{ $pengumuman->judul }}" style="height: 200px !important;" /></a>
                                 <figcaption>
                                     <h5 class="from-top mb-0">Baca Selengkapnya</h5>
 
@@ -79,5 +79,4 @@
     </div>
     <!-- /.container -->
 </section>
-</div>
 @extends('templates.footer')
