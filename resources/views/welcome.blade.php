@@ -11,8 +11,8 @@
                         <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
                             style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%;"></div>
                         <figure class="rounded"><img class="lazyimage"
-                                data-lazyimg="https://1.bp.blogspot.com/-Bwoe1FMhb8Q/WSzH-xArnyI/AAAAAAAABUs/gYcURqg9U5E15CliRKL6XNGNGmOjgPMmgCLcB/w620/sindangjawa.jpg"
-                                alt="Desa Sindangjawa" /></figure>
+                                data-lazyimg="{{ asset('/storage/images/sindangjawa.jpg') }}" alt="Desa Sindangjawa" />
+                        </figure>
                     </div>
                     <!-- wlcme text -->
                     <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 mt-lg-n2 text-center text-lg-start order-2 order-lg-0"
@@ -41,8 +41,8 @@
                             <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
                                 style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
                             <figure class="rounded"><img class="lazyimage"
-                                    data-lazyimg="https://www.smkn1depok.sch.id/assets/images/sekolah/dalam-onedek.jpg"
-                                    alt="Desa Sindangjawa" loading="lazy"></figure>
+                                    data-lazyimg="{{ asset('/storage/images/perpus.jpeg') }}" alt="Desa Sindangjawa"
+                                    loading="lazy"></figure>
                         </div>
                         <!--/column -->
                         <div class="col-lg-5 offset-lg-1">
@@ -79,7 +79,10 @@
                                                     href="{{ route('updatepengumuman.show', $pengumuman->id) }}">
                                                     <img class="lazyimage"
                                                         data-lazyimg="{{ Storage::url('public/pengumuman/') . $pengumuman->image }}"
-                                                        alt="{{ $pengumuman->judul }}" /></a>
+                                                        alt="{{ $pengumuman->judul }}"
+                                                        style="width: 100%;
+                                                        max-width: 100%;
+                                                        height: 200px !important;" /></a>
                                                 <figcaption>
                                                     <h5 class="from-top mb-0">Baca Selengkapnya</h5>
 
@@ -139,7 +142,7 @@
                             <div class="row">
                                 <div class="col-xl-12 mx-auto">
                                     <div class="card image-wrapper bg-full bg-image bg-overlay"
-                                        data-image-src="https://localhost/sistem_informasi_desa/resources/assets/images/bg.jpg">
+                                        data-image-src="{{ asset('/storage/images/bg.jpg') }}">
                                         <div class="card-body p-9 p-xl-10">
                                             <div
                                                 class="row align-items-center counter-wrapper gy-4 text-center text-white">

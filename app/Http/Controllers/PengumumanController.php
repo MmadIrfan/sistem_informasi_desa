@@ -34,7 +34,7 @@ class PengumumanController extends Controller
         $this->validate($request, [
             'kategori'  => 'required',
             'judul'     => 'required',
-            'image'     => 'required|image|mimes:png,jpg,jpeg|max:2048',
+            'image'     => 'required|image|mimes:png,jpg,jpeg|max:5048',
             'tema'      => 'required',
             'konteks'   => 'required',
             'penulis'   => 'required'
@@ -88,7 +88,7 @@ class PengumumanController extends Controller
         $this->validate($request, [
             'kategori'  => 'required',
             'judul'     => 'required',
-            'image'     => 'image|mimes:png,jpg,jpeg|max:2048',
+            'image'     => 'image|mimes:png,jpg,jpeg|max:5048',
             'tema'      => 'required',
             'konteks'   => 'required',
             'penulis'   => 'required'
