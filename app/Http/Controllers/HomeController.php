@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Anggota;
 use App\Models\Demografis;
 use App\Models\Ekonomi;
+use App\Models\Galeri;
 use App\Models\Geografis;
 use App\Models\Kepaladesa;
 use App\Models\Pengumuman;
@@ -22,11 +23,13 @@ class HomeController extends Controller
         $pengumumen = Pengumuman::orderBy('created_at', 'desc')->get();
         $kepaladesas = Kepaladesa::all();
         $anggotas = Anggota::all();
+        $galeris = Galeri::orderBy('created_at', 'desc')->get();
         return view('welcome',[
             'sejarahs' => $sejarahs,
             'pengumumen' =>$pengumumen,
             'kepaladesas' => $kepaladesas,
             'anggotas' => $anggotas,
+            'galeris' => $galeris
         ]);
     }
 
@@ -79,5 +82,11 @@ class HomeController extends Controller
         return view('pages.pemerintahandesa.anggota', ['anggotas' => $anggotas]);
     }
 
-    
+    public function galeri()
+    {
+        $galeris = Galeri::all();
+        $galeris= Galeri::orderBy('created_at', 'desc')->get();
+        return view('pages.galeri.galeri', ['galeris' => $galeris]);
+    }
+
 }

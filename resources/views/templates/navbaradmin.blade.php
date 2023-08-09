@@ -180,7 +180,8 @@
                             </a>
                         </li>
                         <li class="nav-item menu">
-                            <a href="/pemdes" class="nav-link">
+                            <a href="/updategaleri"
+                                class="nav-link {{ Request::is('updategaleri*') ? 'active' : '' }}">
                                 <i class="fas fa-image"></i>
                                 <p>
                                     Galeri

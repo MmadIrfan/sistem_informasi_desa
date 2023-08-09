@@ -206,10 +206,10 @@
                     <div class="container py-14 py-md-12">
                         <div class="row align-items-center mb-7">
                             <div class="col-md-8 col-lg-8 col-xl-7 col-xxl-6 pe-lg-17">
-                                <a href="https://www.smkn1depok.sch.id/galeri">
+                                <a href="/galeri">
                                     <h2 class="display-4 mb-3">Dokumentasi</h2>
                                 </a>
-                                <p class="lead fs-lg">Dokumentasi Tentang Sindangjawa</p>
+                                <p class="lead fs-lg">Dokumentasi Kegiatan Sindangjawa</p>
                             </div>
                             <!--/column -->
                         </div>
@@ -218,118 +218,38 @@
                         <div class="carousel owl-carousel grid-view" data-margin="30" data-dots="true"
                             data-autoplay="false" data-autoplay-timeout="5000"
                             data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
-                            <div class="item">
-                                <figure class="rounded mb-6"><a href="javascript:;">
-                                        <!-- 1. Video Wrapper Container -->
-                                        <div class="embed-youtube"
-                                            data-video-id="08JIbArHdGw?Short Movie I SEPELE - PONDOK KASTARA I MULTIMEDIA SMKN 1 DEPOK">
-                                            <!-- 2. The preview button that will contain the Play icon -->
-                                            <div class="embed-youtube-play"></div>
+                            @foreach ($galeris as $galeri)
+                                <div class="item">
+                                    <article>
+                                        <figure class="overlay overlay1 hover-scale rounded mb-6"><a data-fancybox
+                                                data-src="{{ Storage::url('public/galeri/') . $galeri->foto }}"
+                                                data-caption="{{ $galeri->judul }}">
+                                                <img class="lazyimage"
+                                                    data-lazyimg="{{ Storage::url('public/galeri/') . $galeri->foto }}"
+                                                    width="200" height="150" alt="{{ $galeri->judul }}" /></a>
+                                        </figure>
+                                        <div class="post-header">
+                                            <h2 class="post-title h3 mb-3"><a class="link-dark"
+                                                    href=" {{ route('updategaleri.show', $galeri->id) }} ">{{ $galeri->judul }}</a>
+                                            </h2>
                                         </div>
-                                        <!--<iframe alt="Short Movie I SEPELE - PONDOK KASTARA I MULTIMEDIA SMKN 1 DEPOK" class="mb-4" width="350" height="225" data-src="https://www.youtube.com/embed/08JIbArHdGw" title="Short Movie I SEPELE - PONDOK KASTARA I MULTIMEDIA SMKN 1 DEPOK" name="Short Movie I SEPELE - PONDOK KASTARA I MULTIMEDIA SMKN 1 DEPOK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>-->
-                                        <div class="project-details d-flex justify-content-center flex-column">
-                                            <div class="post-header">
-                                                <div class="post-category text-line mb-3 text-yellow">2021-12-24
-                                                    01:06:30</div>
-                                                <a href=" https://www.smkn1depok.sch.id/galeri/20 ">
-                                                    <h2 class="post-title h3">Short Movie I SEPELE - PONDOK KASTARA I
-                                                        MULTIMEDIA SMKN 1 DEPOK</h2>
-                                                </a>
-                                            </div>
-                                            <!-- /.post-header -->
+                                        <!-- /.post-header -->
+                                        <div class="post-footer">
+                                            <ul class="post-meta">
+                                                <li class="post-date"><i
+                                                        class="uil uil-calendar-alt"></i><span>{{ $galeri->created_at }}</span>
+                                                </li>
+                                                <li class="post-comments"><a href="#"><i
+                                                            class="uil uil-file-alt fs-15"></i>{{ str_replace('_', ' ', $galeri->kategori) }}</a>
+                                                </li>
+                                            </ul>
+                                            <!-- /.post-meta -->
                                         </div>
-                                        <!-- /.project-details -->
-                            </div>
-                            <!-- /.item -->
-                            <div class="item">
-                                <figure class="rounded mb-6"><a href="javascript:;">
-                                        <!-- 1. Video Wrapper Container -->
-                                        <div class="embed-youtube" data-video-id="Eb87gQmmWcM?BLUD SMKN 1 DEPOK">
-                                            <!-- 2. The preview button that will contain the Play icon -->
-                                            <div class="embed-youtube-play"></div>
-                                        </div>
-                                        <!--<iframe alt="BLUD SMKN 1 DEPOK" class="mb-4" width="350" height="225" data-src="https://www.youtube.com/embed/Eb87gQmmWcM" title="BLUD SMKN 1 DEPOK" name="BLUD SMKN 1 DEPOK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>-->
-                                        <div class="project-details d-flex justify-content-center flex-column">
-                                            <div class="post-header">
-                                                <div class="post-category text-line mb-3 text-yellow">2021-12-24
-                                                    01:23:20</div>
-                                                <a href=" https://www.smkn1depok.sch.id/galeri/22 ">
-                                                    <h2 class="post-title h3">BLUD SMKN 1 DEPOK</h2>
-                                                </a>
-                                            </div>
-                                            <!-- /.post-header -->
-                                        </div>
-                                        <!-- /.project-details -->
-                            </div>
-                            <!-- /.item -->
-                            <div class="item">
-                                <figure class="rounded mb-6"><a href="javascript:;">
-                                        <!-- 1. Video Wrapper Container -->
-                                        <div class="embed-youtube"
-                                            data-video-id="m90FclNOe5Q?TA KKSI SMART SCHOOL 2021 - SMKN 1 DEPOK - EDOTEL">
-                                            <!-- 2. The preview button that will contain the Play icon -->
-                                            <div class="embed-youtube-play"></div>
-                                        </div>
-                                        <!--<iframe alt="TA KKSI SMART SCHOOL 2021 - SMKN 1 DEPOK - EDOTEL" class="mb-4" width="350" height="225" data-src="https://www.youtube.com/embed/m90FclNOe5Q" title="TA KKSI SMART SCHOOL 2021 - SMKN 1 DEPOK - EDOTEL" name="TA KKSI SMART SCHOOL 2021 - SMKN 1 DEPOK - EDOTEL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>-->
-                                        <div class="project-details d-flex justify-content-center flex-column">
-                                            <div class="post-header">
-                                                <div class="post-category text-line mb-3 text-yellow">2021-12-24
-                                                    01:26:51</div>
-                                                <a href=" https://www.smkn1depok.sch.id/galeri/23 ">
-                                                    <h2 class="post-title h3">TA KKSI SMART SCHOOL 2021 - SMKN 1 DEPOK
-                                                        - EDOTEL</h2>
-                                                </a>
-                                            </div>
-                                            <!-- /.post-header -->
-                                        </div>
-                                        <!-- /.project-details -->
-                            </div>
-                            <!-- /.item -->
-                            <div class="item">
-                                <figure class="rounded mb-6"><a href="javascript:;">
-                                        <!-- 1. Video Wrapper Container -->
-                                        <div class="embed-youtube"
-                                            data-video-id="BKGMzPQBWm0?SMK NEGERI 1 DEPOK l PUSAT KEUNGGULAN l SEKTOR HOSPITALITY">
-                                            <!-- 2. The preview button that will contain the Play icon -->
-                                            <div class="embed-youtube-play"></div>
-                                        </div>
-                                        <!--<iframe alt="SMK NEGERI 1 DEPOK l PUSAT KEUNGGULAN l SEKTOR HOSPITALITY" class="mb-4" width="350" height="225" data-src="https://www.youtube.com/embed/BKGMzPQBWm0" title="SMK NEGERI 1 DEPOK l PUSAT KEUNGGULAN l SEKTOR HOSPITALITY" name="SMK NEGERI 1 DEPOK l PUSAT KEUNGGULAN l SEKTOR HOSPITALITY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>-->
-                                        <div class="project-details d-flex justify-content-center flex-column">
-                                            <div class="post-header">
-                                                <div class="post-category text-line mb-3 text-yellow">2021-12-24
-                                                    01:27:52</div>
-                                                <a href=" https://www.smkn1depok.sch.id/galeri/24 ">
-                                                    <h2 class="post-title h3">SMK NEGERI 1 DEPOK l PUSAT KEUNGGULAN l
-                                                        SEKTOR HOSPITALITY</h2>
-                                                </a>
-                                            </div>
-                                            <!-- /.post-header -->
-                                        </div>
-                                        <!-- /.project-details -->
-                            </div>
-                            <!-- /.item -->
-                            <div class="item">
-                                <figure class="rounded mb-6"><a href="javascript:;">
-                                        <!-- 1. Video Wrapper Container -->
-                                        <div class="embed-youtube"
-                                            data-video-id="_ET6dW2ImA4?Live Stream SMK Negeri 1 Depok | HUT PGRI KE-76 &amp; HARI GURU NASIONAL 2021">
-                                            <!-- 2. The preview button that will contain the Play icon -->
-                                            <div class="embed-youtube-play"></div>
-                                        </div>
-                                        <!--<iframe alt="Live Stream SMK Negeri 1 Depok | HUT PGRI KE-76 &amp; HARI GURU NASIONAL 2021" class="mb-4" width="350" height="225" data-src="https://www.youtube.com/embed/_ET6dW2ImA4" title="Live Stream SMK Negeri 1 Depok | HUT PGRI KE-76 &amp; HARI GURU NASIONAL 2021" name="Live Stream SMK Negeri 1 Depok | HUT PGRI KE-76 &amp; HARI GURU NASIONAL 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>-->
-                                        <div class="project-details d-flex justify-content-center flex-column">
-                                            <div class="post-header">
-                                                <div class="post-category text-line mb-3 text-yellow">2021-12-24
-                                                    01:29:17</div>
-                                                <a href=" https://www.smkn1depok.sch.id/galeri/25 ">
-                                                    <h2 class="post-title h3">Live Stream SMK Negeri 1 Depok | HUT PGRI
-                                                        KE-76 &amp; HARI GURU NASIONAL 2021</h2>
-                                                </a>
-                                            </div>
-                                            <!-- /.post-header -->
-                                        </div>
-                                        <!-- /.project-details -->
-                            </div>
+                                        <!-- /.post-footer -->
+                                    </article>
+                                    <!-- /article -->
+                                </div>
+                            @endforeach
                             <!-- /.item -->
                         </div>
                         <!-- /.owl-carousel -->

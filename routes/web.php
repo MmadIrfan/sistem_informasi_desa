@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DemografisController;
 use App\Http\Controllers\EkonomiController;
+use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\GeografisController;
 use App\Http\Controllers\KepaladesaController;
 use App\Http\Controllers\PengumumanController;
@@ -33,10 +34,11 @@ Route::get('/demografis', [HomeController::class,'demografis']);
 Route::get('/kondisiekonomi', [HomeController::class,'kondisiekonomi']);
 Route::get('/pengumuman', [HomeController::class,'pengumuman']);
 Route::get('/pemerintahandesa', [HomeController::class,'anggota']);
+Route::get('/galeri', [HomeController::class,'galeri']);
 
 //Auth
-Route::get('/login', [AuthController::class,'login'])->name('login');
-Route::post('/login', [AuthController::class,'authenticated']);
+Route::get('/adminsindangjawamaju', [AuthController::class,'login'])->name('login');
+Route::post('/adminsindangjawamaju', [AuthController::class,'authenticated']);
 Route::get('/logout', [AuthController::class,'logout']);
 
 //Dashboard
@@ -50,5 +52,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('updatedemografis', DemografisController::class);
     Route::resource('updateekonomi', EkonomiController::class);
     Route::resource('updateanggota', AnggotaController::class);
+    Route::resource('updategaleri', GaleriController::class);
     Route::resource('updatepengumuman', PengumumanController::class)->except(['show']);
 });

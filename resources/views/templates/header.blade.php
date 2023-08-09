@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="http://localhost/sistem_informasi_desa/resources/assets/css/landingcss/style.css">
     <link rel="preload" href="http://localhost/sistem_informasi_desa/resources/assets/css/landingcss/fonts/dm.css"
         as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <style>
         img.lazy {
             background: #F1F1FA;
@@ -31,70 +32,6 @@
             display: block;
             margin: 0;
             border: 0;
-        }
-    </style>
-    <style>
-        .embed-youtube {
-            background-color: #000;
-            margin-bottom: 30px;
-            position: relative;
-            padding-top: 56.25%;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .embed-youtube img {
-            width: 100%;
-            top: -16.84%;
-            left: 0;
-            opacity: 0.7;
-        }
-
-        .embed-youtube .embed-youtube-play {
-            width: 68px;
-            height: 48px;
-            background-color: #333;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-            z-index: 1;
-            opacity: 0.8;
-            border-radius: 6px;
-        }
-
-        .embed-youtube .embed-youtube-play:before {
-            content: "";
-            border-style: solid;
-            border-width: 15px 0 15px 26.0px;
-            border-color: transparent transparent transparent #fff;
-        }
-
-        .embed-youtube img,
-        .embed-youtube .embed-youtube-play {
-            cursor: pointer;
-        }
-
-        .embed-youtube img,
-        .embed-youtube iframe,
-        .embed-youtube .embed-youtube-play,
-        .embed-youtube .embed-youtube-play:before {
-            position: absolute;
-        }
-
-        .embed-youtube .embed-youtube-play,
-        .embed-youtube .embed-youtube-play:before {
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0);
-        }
-
-        .embed-youtube iframe {
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        .embed-youtube .embed-youtube-play:hover {
-            background-color: #f00;
         }
     </style>
 
@@ -117,25 +54,41 @@
                         aria-label="Close"></button>
                 </div>
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link has-submenu" href="javaScript:void(0)">Profil</a>
+                    <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}"
+                            href="/">Beranda</a></li>
+                    <li class="nav-item dropdown"><a
+                            class="nav-link has-submenu {{ Request::is('visimisi', 'sejarah', 'sambutan', 'geografis', 'demografis', 'kondisiekonomi') ? 'active' : '' }}"
+                            href="javaScript:void(0)">Profil</a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown"><a class="dropdown-item dropdown-toggle"
-                                    href="javaScript:void(0)">Desa</a>
+                            <li class="dropdown"><a
+                                    class="dropdown-item dropdown-toggle {{ Request::is('visimisi', 'sejarah', 'sambutan') ? 'active' : '' }}">Desa</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="dropdown-item" href="/visimisi">Visi Misi</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="/sejarah">Sejarah</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="/sambutan">Kepala Desa</a></li>
+                                    <li class="nav-item"><a
+                                            class="dropdown-item {{ Request::is('visimisi') ? 'active' : '' }}"
+                                            href="/visimisi">Visi Misi</a></li>
+                                    <li class="nav-item"><a
+                                            class="dropdown-item {{ Request::is('sejarah') ? 'active' : '' }}"
+                                            href="/sejarah">Sejarah</a></li>
+                                    <li class="nav-item"><a
+                                            class="dropdown-item {{ Request::is('sambutan') ? 'active' : '' }}"
+                                            href="/sambutan">Kepala Desa</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-item dropdown-toggle"
+                            <li class="dropdown"><a
+                                    class="dropdown-item dropdown-toggle {{ Request::is('geografis', 'demografis', 'kondisiekonomi') ? 'active' : '' }}"
                                     href="javaScript:void(0)">Gambaran Umum</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="dropdown-item" href="/geografis">Kondisi Geografis
+                                    <li class="nav-item"><a
+                                            class="dropdown-item {{ Request::is('geografis') ? 'active' : '' }}"
+                                            href="/geografis">Kondisi Geografis
                                         </a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="/demografis">Demografis </a>
+                                    <li class="nav-item"><a
+                                            class="dropdown-item {{ Request::is('demografis') ? 'active' : '' }}"
+                                            href="/demografis">Demografis </a>
                                     </li>
-                                    <li class="nav-item"><a class="dropdown-item" href="/kondisiekonomi">Kondisi Ekonomi
+                                    <li class="nav-item"><a
+                                            class="dropdown-item {{ Request::is('kondisiekonomi') ? 'active' : '' }}"
+                                            href="/kondisiekonomi">Kondisi Ekonomi
                                         </a></li>
                                 </ul>
                         </ul>
@@ -149,9 +102,12 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="/pengumuman">Pengumuman</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pemerintahandesa">Pemerintahan Desa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link {{ Request::is('pengumuman*') ? 'active' : '' }}"
+                            href="/pengumuman">Pengumuman</a></li>
+                    <li class="nav-item"><a class="nav-link {{ Request::is('pemerintahandesa') ? 'active' : '' }}"
+                            href="/pemerintahandesa">Pemerintahan Desa</a></li>
+                    <li class="nav-item"><a class="nav-link {{ Request::is('galeri') ? 'active' : '' }}"
+                            href="/galeri">Galeri</a></li>
 
                 </ul>
                 <!-- /.navbar-nav -->
@@ -159,9 +115,6 @@
             <!-- /.navbar-collapse -->
             <div class="navbar-other w-90 d-flex ms-auto">
                 <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
-                    <li class="nav-item d-none d-md-block">
-                        <a href="/login" class="btn btn-sm btn-orange rounded-pill">Login</a>
-                    </li>
                     <li class="nav-item d-lg-none">
                         <div class="navbar-hamburger"><button class="hamburger animate plain"
                                 data-toggle="offcanvas-nav"><span></span></button></div>
