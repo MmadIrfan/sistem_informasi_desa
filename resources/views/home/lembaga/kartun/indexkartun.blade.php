@@ -7,7 +7,7 @@
                     <div class="card-body">
                         <div class="classic-view">
                             <article class="post">
-                                <h1 class="text-center">PKK</h1>
+                                <h1 class="text-center">KARANG TARUNA</h1>
                                 <div class="card-body">
                                     <table class="table table-bordered">
                                         <thead class="text-center">
@@ -17,12 +17,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($pkks as $pkk)
+                                            @foreach ($kartuns as $kartun)
                                                 <tr>
-                                                    <td>{!! $pkk->informasi !!}</td>
+                                                    <td>{!! $kartun->informasi !!}</td>
                                                     <td class="text-center">
                                                         <form>
-                                                            <a href="{{ route('updatepkk.edit', $pkk->id) }}"
+                                                            <a href="{{ route('updatekartun.edit', $kartun->id) }}"
                                                                 class="btn btn-sm btn-primary">EDIT</a>
                                                         </form>
                                                     </td>
@@ -31,7 +31,7 @@
                                         </tbody>
                                     </table>
                                     <br>
-                                    <a href="{{ route('updatekegiatanpkk.create') }}"
+                                    <a href="{{ route('updatekegiatankartun.create') }}"
                                         class="btn btn-sm btn-success">TAMBAH KEGIATAN</a>
                                     <table class="table table-bordered">
                                         <thead class="text-center">
@@ -42,18 +42,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @forelse ($kegiatanpkks as $kegiatanpkk)
+                                            @forelse ($kegiatankartuns as $kegiatankartun)
                                                 <tr>
                                                     <td class="text-center">
-                                                        <img src="{{ Storage::url('public/kegiatanpkk/') . $kegiatanpkk->kegiatan }}"
+                                                        <img src="{{ Storage::url('public/kegiatankartun/') . $kegiatankartun->kegiatan }}"
                                                             class="rounded" style="width: 150px">
                                                     </td>
-                                                    <td>{{ $kegiatanpkk->judulkegiatan }}</td>
+                                                    <td>{{ $kegiatankartun->judulkegiatan }}</td>
                                                     <td class="text-center">
                                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                            action="{{ route('updatekegiatanpkk.destroy', $kegiatanpkk->id) }}"
+                                                            action="{{ route('updatekegiatankartun.destroy', $kegiatankartun->id) }}"
                                                             method="POST">
-                                                            <a href="{{ route('updatekegiatanpkk.edit', $kegiatanpkk->id) }}"
+                                                            <a href="{{ route('updatekegiatankartun.edit', $kegiatankartun->id) }}"
                                                                 class="btn btn-sm btn-primary">EDIT</a>
                                                             @csrf
                                                             @method('DELETE')
@@ -64,13 +64,13 @@
                                             @empty
                                                 <br>
                                                 <div class="alert alert-danger">
-                                                    kegiatan pkk belum Tersedia.
+                                                    Kegiatan Karang Taruna belum Tersedia.
                                                 </div>
                                             @endforelse
                                         </tbody>
                                     </table>
                                     <br>
-                                    <a href="{{ route('updateprestasipkk.create') }}"
+                                    <a href="{{ route('updateprestasikartun.create') }}"
                                         class="btn btn-sm btn-success">TAMBAH
                                         PRESTASI</a>
                                     <table class="table table-bordered">
@@ -82,18 +82,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @forelse ($prestasipkks as $prestasipkk)
+                                            @forelse ($prestasikartuns as $prestasikartun)
                                                 <tr>
                                                     <td class="text-center">
-                                                        <img src="{{ Storage::url('public/prestasipkk/') . $prestasipkk->prestasi }}"
+                                                        <img src="{{ Storage::url('public/prestasikartun/') . $prestasikartun->prestasi }}"
                                                             class="rounded" style="width: 150px">
                                                     </td>
-                                                    <td>{{ $prestasipkk->judulprestasi }}</td>
+                                                    <td>{{ $prestasikartun->judulprestasi }}</td>
                                                     <td class="text-center">
                                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                            action="{{ route('updateprestasipkk.destroy', $prestasipkk->id) }}"
+                                                            action="{{ route('updateprestasikartun.destroy', $prestasikartun->id) }}"
                                                             method="POST">
-                                                            <a href="{{ route('updateprestasipkk.edit', $prestasipkk->id) }}"
+                                                            <a href="{{ route('updateprestasikartun.edit', $prestasikartun->id) }}"
                                                                 class="btn btn-sm btn-primary">EDIT</a>
                                                             @csrf
                                                             @method('DELETE')
@@ -105,12 +105,12 @@
                                             @empty
                                                 <br>
                                                 <div class="alert alert-danger">
-                                                    prestasi pkk belum Tersedia.
+                                                    Prestasi Karang Taruna belum Tersedia.
                                                 </div>
                                             @endforelse
                                         </tbody>
                                     </table>
-                                    {{ $pkks->links() }}
+                                    {{ $kartuns->links() }}
                                 </div>
                             </article>
                         </div>

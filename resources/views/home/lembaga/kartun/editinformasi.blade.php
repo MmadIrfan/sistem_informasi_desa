@@ -6,15 +6,15 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('updatepkk.update', $pkk->id) }}" method="POST"
+                        <form action="{{ route('updatekartun.update', $kartun->id) }}" method="POST"
                             enctype="multipart/form-data">
 
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label class="font-weight-bold">INFORMASI PKK</label>
+                                <label class="font-weight-bold">INFORMASI KARANG TARUNA</label>
                                 <textarea class="form-control @error('informasi') is-invalid @enderror" name="informasi" rows="5"
-                                    placeholder="Masukkan Konten Post">{{ old('informasi', $pkk->informasi) }}</textarea>
+                                    placeholder="Masukkan Konten Post">{{ old('informasi', $kartun->informasi) }}</textarea>
 
                                 <!-- error message untuk informasi -->
                                 @error('informasi')

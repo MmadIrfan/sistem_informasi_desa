@@ -6,24 +6,38 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('updatepkk.update', $pkk->id) }}" method="POST"
+                        <form action="{{ route('updateprestasikartun.update', $prestasikartun->id) }}" method="POST"
                             enctype="multipart/form-data">
 
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label class="font-weight-bold">INFORMASI PKK</label>
-                                <textarea class="form-control @error('informasi') is-invalid @enderror" name="informasi" rows="5"
-                                    placeholder="Masukkan Konten Post">{{ old('informasi', $pkk->informasi) }}</textarea>
+                                <label class="font-weight-bold">FOTO PRESTASI</label>
+                                <input type="file" class="form-control @error('prestasi') is-invalid @enderror"
+                                    name="prestasi">
 
-                                <!-- error message untuk informasi -->
-                                @error('informasi')
+                                <!-- error message untuk title -->
+                                @error('prestasi')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
                                     </div>
                                 @enderror
                             </div>
 
+                            <div class="form-group">
+                                <label class="font-weight-bold">KETERANGAN PRESTASI</label>
+                                <input type="text" class="form-control @error('judulprestasi') is-invalid @enderror"
+                                    name="judulprestasi"
+                                    value="{{ old('judulprestasi', $prestasikartun->judulprestasi) }}"
+                                    placeholder="Masukkan Keterangan">
+
+                                <!-- error message untuk nama -->
+                                @error('nama')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
                             <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
                             <button type="reset" class="btn btn-md btn-warning">RESET</button>
 
@@ -34,11 +48,6 @@
         </div>
     </div>
 </div>
-
-<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('informasi');
-</script>
 <!-- jQuery -->
 <script src="{{ asset('lte') }}/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

@@ -6,9 +6,11 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('updateprestasipkk.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
+                        <form action="{{ route('updateprestasipkk.update', $prestasipkk->id) }}" method="POST"
+                            enctype="multipart/form-data">
 
+                            @csrf
+                            @method('PUT')
                             <div class="form-group">
                                 <label class="font-weight-bold">FOTO PRESTASI</label>
                                 <input type="file" class="form-control @error('prestasi') is-invalid @enderror"

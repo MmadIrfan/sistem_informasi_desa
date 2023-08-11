@@ -8,8 +8,14 @@ use App\Models\Demografis;
 use App\Models\Ekonomi;
 use App\Models\Galeri;
 use App\Models\Geografis;
+use App\Models\Kartun;
+use App\Models\Kegiatankartun;
+use App\Models\Kegiatanpkk;
 use App\Models\Kepaladesa;
 use App\Models\Pengumuman;
+use App\Models\Pkk;
+use App\Models\Prestasikartun;
+use App\Models\Prestasipkk;
 use App\Models\Sejarah;
 use App\Models\Visimisi;
 use Illuminate\Http\Request;
@@ -71,8 +77,18 @@ class HomeController extends Controller
 
     public function pkk()
     {
-        $ekonomis = Ekonomi::all();
-        return view('pages.lembaga.pkk');
+        $pkks = Pkk::all();
+        $kegiatanpkks = Kegiatanpkk::all();
+        $prestasipkks = Prestasipkk::all();
+        return view('pages.lembaga.pkk', ['pkks' => $pkks, 'kegiatanpkks' => $kegiatanpkks, 'prestasipkks' => $prestasipkks]);
+    }
+
+    public function kartun()
+    {
+        $kartuns = Kartun::all();
+        $kegiatankartuns = Kegiatankartun::all();
+        $prestasikartuns = Prestasikartun::all();
+        return view('pages.lembaga.kartun', ['kartuns' => $kartuns, 'kegiatankartuns' => $kegiatankartuns, 'prestasikartuns' => $prestasikartuns]);
     }
 
     public function pengumuman()

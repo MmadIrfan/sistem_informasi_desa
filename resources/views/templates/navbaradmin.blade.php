@@ -138,8 +138,9 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item menu">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item menu {{ Request::is('updatepkk*', 'updatekartun*') ? 'menu-open' : '' }}">
+                            <a href="#"
+                                class="nav-link {{ Request::is('updatepkk*', 'updatekartun*') ? 'active' : '' }}">
                                 <i class="fas fa-table"></i>
                                 <p>
                                     Lembaga
@@ -148,13 +149,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/updatepkk" class="nav-link">
+                                    <a href="/updatepkk"
+                                        class="nav-link {{ Request::is('updatepkk*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>PKK</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/tables/data.html" class="nav-link">
+                                    <a href="/updatekartun"
+                                        class="nav-link {{ Request::is('updatekartun*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Karang Taruna</p>
                                     </a>

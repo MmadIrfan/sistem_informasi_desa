@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pkk;
+use App\Models\Kartun;
 use App\Http\Controllers\Controller;
-use App\Models\Kegiatanpkk;
-use App\Models\Prestasipkk;
+use App\Models\Kegiatankartun;
+use App\Models\Prestasikartun;
 use Illuminate\Http\Request;
 
-class PkkController extends Controller
+class KartunController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $pkks = Pkk::latest()->paginate(10);
-        $kegiatanpkks = Kegiatanpkk::latest()->paginate(10);
-        $prestasipkks = Prestasipkk::latest()->paginate(10);
-        return view('home.lembaga.pkk.indexpkk', compact('pkks', 'kegiatanpkks', 'prestasipkks'));
+        $kartuns = kartun::latest()->paginate(10);
+        $kegiatankartuns = Kegiatankartun::latest()->paginate(10);
+        $prestasikartuns = Prestasikartun::latest()->paginate(10);
+        return view('home.lembaga.kartun.indexkartun', compact('kartuns', 'kegiatankartuns', 'prestasikartuns'));
     }
 
     /**
@@ -40,7 +40,7 @@ class PkkController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Pkk $pkk)
+    public function show(Kartun $kartun)
     {
         //
     }
@@ -48,39 +48,39 @@ class PkkController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Pkk $pkk, $id)
+    public function edit(Kartun $kartun, $id)
     {
-        $pkk = Pkk::find($id);
-        return view('home.lembaga.pkk.editinformasi', compact('pkk'));
+        $kartun = Kartun::find($id);
+        return view('home.lembaga.kartun.editinformasi', compact('kartun'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Pkk $pkk, $id)
+    public function update(Request $request, Kartun $kartun, $id)
     {
         $this->validate($request, [
             'informasi'      => 'required'
         ]);
 
-        $pkk = Pkk::find($id);
-        $pkk->update([
+        $kartun = Kartun::find($id);
+        $kartun->update([
             'informasi'      => $request->informasi
         ]);
         //redirect to index
-        if($pkk){
+        if($kartun){
             //redirect dengan pesan sukses
-            return redirect()->route('updatepkk.index')->with(['success' => 'Data Berhasil Disimpan!']);
+            return redirect()->route('updatekartun.index')->with(['success' => 'Data Berhasil Disimpan!']);
         }else{
             //redirect dengan pesan error
-            return redirect()->route('updatepkk.index')->with(['error' => 'Data Gagal Disimpan!']);
+            return redirect()->route('updatekartun.index')->with(['error' => 'Data Gagal Disimpan!']);
         }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pkk $pkk)
+    public function destroy(Kartun $kartun)
     {
         //
     }

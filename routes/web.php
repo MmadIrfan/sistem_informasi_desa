@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\KartunController;
+use App\Http\Controllers\KegiatankartunController;
+use App\Http\Controllers\PrestasikartunController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
@@ -36,6 +39,7 @@ Route::get('/geografis', [HomeController::class,'geografis']);
 Route::get('/demografis', [HomeController::class,'demografis']);
 Route::get('/kondisiekonomi', [HomeController::class,'kondisiekonomi']);
 Route::get('/pkk', [HomeController::class,'pkk']);
+Route::get('/karangtaruna', [HomeController::class,'kartun']);
 Route::get('/pengumuman', [HomeController::class,'pengumuman']);
 Route::get('/pemerintahandesa', [HomeController::class,'anggota']);
 Route::get('/galeri', [HomeController::class,'galeri']);
@@ -58,6 +62,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('updatepkk', PkkController::class);
     Route::resource('updatekegiatanpkk', KegiatanpkkController::class);
     Route::resource('updateprestasipkk', PrestasipkkController::class);
+    Route::resource('updatekartun', KartunController::class);
+    Route::resource('updatekegiatankartun', KegiatankartunController::class);
+    Route::resource('updateprestasikartun', PrestasikartunController::class);
     Route::resource('updateanggota', AnggotaController::class);
     Route::resource('updategaleri', GaleriController::class);
     Route::resource('updatepengumuman', PengumumanController::class)->except(['show']);

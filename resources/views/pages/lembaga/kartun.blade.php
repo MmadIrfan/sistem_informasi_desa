@@ -8,9 +8,8 @@
                         <a href="#" class="hover" rel="category">Lembaga</a>
                     </div>
                     <!-- /.post-category -->
-                    <h1 class="display-1 mb-3">Pemberdayaan Kesejahteraan Keluarga</h1>
-                    <p class="lead px-md-12 px-lg-12 px-xl-15 px-xxl-18">( PKK )</p>
-                    <img class="lazyimage logo-jurusan" data-lazyimg="{{ asset('/storage/images/LogoPkk.png') }}"
+                    <h1 class="display-1 mb-3">KARANG TARUNA</h1>
+                    <img class="lazyimage logo-jurusan" data-lazyimg="{{ asset('/storage/images/LogoKartun.png') }}"
                         alt="" srcset="">
                 </div>
                 <!-- /.post-header -->
@@ -35,8 +34,8 @@
                             <h2 class="display-6 mb-4">Informasi Lembaga</h2>
                             <div class="row gx-0">
                                 <div class="col-md-10 text-justify">
-                                    @foreach ($pkks as $pkk)
-                                        <p>{!! $pkk->informasi !!}</p>
+                                    @foreach ($kartuns as $kartun)
+                                        <p>{!! $kartun->informasi !!}</p>
                                     @endforeach
                                 </div>
                                 <!--/.row -->
@@ -46,7 +45,7 @@
                                     <a href="#">
                                         <h2 class="display-6 mb-3">Dokumentasi</h2>
                                     </a>
-                                    <p class="">Dokumentasi Kegiatan PKK</p>
+                                    <p class="">Dokumentasi Kegiatan Karang Taruna</p>
                                 </div>
                                 <!--/column -->
                             </div>
@@ -54,26 +53,27 @@
                             <div class="carousel owl-carousel grid-view" data-margin="30" data-dots="true"
                                 data-autoplay="false" data-autoplay-timeout="5000"
                                 data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
-                                @forelse ($kegiatanpkks as $kegiatanpkk)
+                                @forelse ($kegiatankartuns as $kegiatankartun)
                                     <div class="item">
                                         <article>
                                             <figure class="overlay overlay1 hover-scale rounded mb-6"><a data-fancybox
-                                                    data-src="{{ Storage::url('public/kegiatanpkk/') . $kegiatanpkk->kegiatan }}"
-                                                    data-caption="{{ $kegiatanpkk->judulkegiatan }}">
+                                                    data-src="{{ Storage::url('public/kegiatankartun/') . $kegiatankartun->kegiatan }}"
+                                                    data-caption="{{ $kegiatankartun->judulkegiatan }}">
                                                     <img class="lazyimage"
-                                                        data-lazyimg="{{ Storage::url('public/kegiatanpkk/') . $kegiatanpkk->kegiatan }}"
+                                                        data-lazyimg="{{ Storage::url('public/kegiatankartun/') . $kegiatankartun->kegiatan }}"
                                                         width="200" height="150"
-                                                        alt="{{ $kegiatanpkk->judulkegiatan }}" /></a>
+                                                        alt="{{ $kegiatankartun->judulkegiatan }}" /></a>
                                             </figure>
                                             <div class="post-header">
-                                                <h2 class="post-title h3 mb-3"><a>{{ $kegiatanpkk->judulkegiatan }}</a>
+                                                <h2 class="post-title h3 mb-3">
+                                                    <a>{{ $kegiatankartun->judulkegiatan }}</a>
                                                 </h2>
                                             </div>
                                             <!-- /.post-header -->
                                             <div class="post-footer">
                                                 <ul class="post-meta">
                                                     <li class="post-date"><i
-                                                            class="uil uil-calendar-alt"></i><span>{{ $kegiatanpkk->created_at }}</span>
+                                                            class="uil uil-calendar-alt"></i><span>{{ $kegiatankartun->created_at }}</span>
                                                     </li>
                                                 </ul>
                                                 <!-- /.post-meta -->
@@ -84,7 +84,7 @@
                                     </div>
                                 @empty
                                     <div class="alert alert-danger">
-                                        Data Dokumentasi belum Tersedia.
+                                        Data Kegiatan belum Tersedia.
                                     </div>
                                 @endforelse
                             </div>
@@ -94,7 +94,7 @@
                                     <a href="#">
                                         <h2 class="display-6 mb-3">Prestasi</h2>
                                     </a>
-                                    <p class="">Prestasi PKK</p>
+                                    <p class="">Prestasi Karang Taruna</p>
                                 </div>
                                 <!--/column -->
                             </div>
@@ -102,26 +102,27 @@
                             <div class="carousel owl-carousel grid-view" data-margin="30" data-dots="true"
                                 data-autoplay="false" data-autoplay-timeout="5000"
                                 data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
-                                @forelse ($prestasipkks as $prestasipkk)
+                                @forelse ($prestasikartuns as $prestasikartun)
                                     <div class="item">
                                         <article>
                                             <figure class="overlay overlay1 hover-scale rounded mb-6"><a data-fancybox
-                                                    data-src="{{ Storage::url('public/prestasipkk/') . $prestasipkk->prestasi }}"
-                                                    data-caption="{{ $prestasipkk->judulprestasi }}">
+                                                    data-src="{{ Storage::url('public/prestasikartun/') . $prestasikartun->prestasi }}"
+                                                    data-caption="{{ $prestasikartun->judulprestasi }}">
                                                     <img class="lazyimage"
-                                                        data-lazyimg="{{ Storage::url('public/prestasipkk/') . $prestasipkk->prestasi }}"
+                                                        data-lazyimg="{{ Storage::url('public/prestasikartun/') . $prestasikartun->prestasi }}"
                                                         width="200" height="150"
-                                                        alt="{{ $prestasipkk->judulprestasi }}" /></a>
+                                                        alt="{{ $prestasikartun->judulprestasi }}" /></a>
                                             </figure>
                                             <div class="post-header">
-                                                <h2 class="post-title h3 mb-3"><a>{{ $prestasipkk->judulprestasi }}</a>
+                                                <h2 class="post-title h3 mb-3">
+                                                    <a>{{ $prestasikartun->judulprestasi }}</a>
                                                 </h2>
                                             </div>
                                             <!-- /.post-header -->
                                             <div class="post-footer">
                                                 <ul class="post-meta">
                                                     <li class="post-date"><i
-                                                            class="uil uil-calendar-alt"></i><span>{{ $kegiatanpkk->created_at }}</span>
+                                                            class="uil uil-calendar-alt"></i><span>{{ $prestasikartun->created_at }}</span>
                                                     </li>
                                                 </ul>
                                                 <!-- /.post-meta -->

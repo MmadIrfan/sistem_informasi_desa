@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Prestasipkk;
+use App\Models\Prestasikartun;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class PrestasipkkController extends Controller
+class PrestasikartunController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,7 +22,7 @@ class PrestasipkkController extends Controller
      */
     public function create()
     {
-        return view('home.lembaga.pkk.createprestasi');
+        return view('home.lembaga.kartun.createprestasi');
     }
 
     /**
@@ -37,26 +37,26 @@ class PrestasipkkController extends Controller
     
         //upload image
         $prestasi = $request->file('prestasi');
-        $prestasi->storeAs('public/prestasipkk', $prestasi->hashName());
+        $prestasi->storeAs('public/prestasikartun', $prestasi->hashName());
     
-        $prestasipkk = Prestasipkk::create([
+        $prestasikartun = Prestasikartun::create([
             'prestasi'           => $prestasi->hashName(),
             'judulprestasi'      => $request->judulprestasi
         ]);
     
-        if($prestasipkk){
+        if($prestasikartun){
             //redirect dengan pesan sukses
-            return redirect()->route('updatepkk.index')->with(['success' => 'Data Berhasil Disimpan!']);
+            return redirect()->route('updatekartun.index')->with(['success' => 'Data Berhasil Disimpan!']);
         }else{
             //redirect dengan pesan error
-            return redirect()->route('updatepkk.index')->with(['error' => 'Data Gagal Disimpan!']);
+            return redirect()->route('updatekartun.index')->with(['error' => 'Data Gagal Disimpan!']);
         }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Prestasipkk $prestasipkk)
+    public function show(Prestasikartun $prestasikartun)
     {
         //
     }
@@ -64,36 +64,36 @@ class PrestasipkkController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Prestasipkk $prestasipkk, $id)
+    public function edit(Prestasikartun $prestasikartun, $id)
     {
-        $prestasipkk = Prestasipkk::find($id);
-        return view('home.lembaga.pkk.editprestasi', compact('prestasipkk'));
+        $prestasikartun = Prestasikartun::find($id);
+        return view('home.lembaga.kartun.editprestasi', compact('prestasikartun'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Prestasipkk $prestasipkk, $id)
+    public function update(Request $request, Prestasikartun $prestasikartun, $id)
     {
         $this->validate($request, [
             'prestasi'     => 'image|mimes:png,jpg,jpeg|max:5048',
             'judulprestasi'      => 'required',
         ]);
 
-        $prestasipkk = Prestasipkk::find($id);
+        $prestasikartun = Prestasikartun::find($id);
 
         //check if image is uploaded
         if ($request->hasFile('prestasi')) {
 
             //upload new image
             $prestasi = $request->file('prestasi');
-            $prestasi->storeAs('public/prestasipkk', $prestasi->hashName());
+            $prestasi->storeAs('public/prestasikartun', $prestasi->hashName());
 
             //delete old image
-            Storage::delete('public/prestasipkk/'.$prestasipkk->prestasi);
+            Storage::delete('public/prestasikartun/'.$prestasikartun->prestasi);
 
-            //update prestasipkk with new image
-            $prestasipkk->update([
+            //update prestasikartun with new image
+            $prestasikartun->update([
                 'prestasi'           => $prestasi->hashName(),
                 'judulprestasi'      => $request->judulprestasi
             ]);
@@ -101,33 +101,32 @@ class PrestasipkkController extends Controller
         } else {
 
             //update post without image
-            $prestasipkk->update([
+            $prestasikartun->update([
                 'judulprestasi'      => $request->judulprestasi
             ]);
         }
 
         //redirect to index
-        if($prestasipkk){
+        if($prestasikartun){
             //redirect dengan pesan sukses
-            return redirect()->route('updatepkk.index')->with(['success' => 'Data Berhasil Disimpan!']);
+            return redirect()->route('updatekartun.index')->with(['success' => 'Data Berhasil Disimpan!']);
         }else{
             //redirect dengan pesan error
-            return redirect()->route('updatepkk.index')->with(['error' => 'Data Gagal Disimpan!']);
+            return redirect()->route('updatekartun.index')->with(['error' => 'Data Gagal Disimpan!']);
         }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Prestasipkk $prestasipkk, $id)
+    public function destroy(Prestasikartun $prestasikartun, $id)
     {
-        $prestasipkk = Prestasipkk::find($id);
+        $prestasikartun = Prestasikartun::find($id);
 
-        Storage::delete('public/prestasipkk/'.$prestasipkk->prestasi);
+        Storage::delete('public/prestasikartun/'.$prestasikartun->prestasi);
 
-        $prestasipkk->delete();
+        $prestasikartun->delete();
 
-        return redirect()->route('updatepkk.index')->with(['success' => 'Data Berhasil Dihapus!']);
-
+        return redirect()->route('updatekartun.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }

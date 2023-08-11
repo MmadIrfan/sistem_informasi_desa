@@ -95,12 +95,14 @@
                     </li>
 
                     <li class="nav-item dropdown"><a
-                            class="nav-link dropdown-toggle {{ Request::is('pkk') ? 'active' : '' }}"
+                            class="nav-link dropdown-toggle {{ Request::is('pkk', 'karangtaruna') ? 'active' : '' }}"
                             href="javaScript:void(0)">Lembaga</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item {{ Request::is('pkk') ? 'active' : '' }}"
                                     href="/pkk">PKK</a></li>
-                            <li class="nav-item"><a class="dropdown-item" href="">Karang Taruna</a></li>
+                            <li class="nav-item"><a
+                                    class="dropdown-item {{ Request::is('karangtaruna') ? 'active' : '' }}"
+                                    href="/karangtaruna">Karang Taruna</a></li>
                         </ul>
                     </li>
 

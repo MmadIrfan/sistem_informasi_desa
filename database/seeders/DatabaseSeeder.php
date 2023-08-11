@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Demografis;
 use App\Models\Ekonomi;
 use App\Models\Geografis;
+use App\Models\Kartun;
 use App\Models\Kepaladesa;
 use App\Models\Pkk;
 use App\Models\Sejarah;
@@ -348,7 +349,11 @@ class DatabaseSeeder extends Seeder
         ]); 
 
         Pkk::create([
-            'informasi'=>'Pemberdayaan Kesejahteraan Keluarga, disingkat PKK, adalah organisasi kemasyarakatan yang memberdayakan wanita untuk turut berpartisipasi dalam pembangunan Indonesia.'
+            'informasi'=>'<p>Pemberdayaan Kesejahteraan Keluarga, disingkat PKK, adalah organisasi kemasyarakatan yang memberdayakan wanita untuk turut berpartisipasi dalam pembangunan Indonesia.</p>'
+        ]);
+
+        Kartun::create([
+            'informasi'=>'<p>Karang Taruna adalah organisasi sosial kemasyarakatan sebagai wadah dan sarana pengembangan setiap anggota masyarakat yang tumbuh dan berkembang atas dasar kesadaran dan tanggung jawab sosial dari, oleh dan untuk masyarakat terutama generasi muda di wilayah desa/kelurahan terutama bergerak dibidang usaha kesejahteraan sosial.</p>'
         ]);
 
     }
