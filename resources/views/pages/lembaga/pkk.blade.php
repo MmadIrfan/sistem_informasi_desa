@@ -137,7 +137,8 @@
                                 @endforelse
 
                             </div>
-
+                        </div>
+                    </div>
                 </article>
                 <!-- /.project -->
             </div>
