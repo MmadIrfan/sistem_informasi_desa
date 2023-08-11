@@ -8,6 +8,7 @@ use App\Models\Demografis;
 use App\Models\Ekonomi;
 use App\Models\Geografis;
 use App\Models\Kepaladesa;
+use App\Models\Pkk;
 use App\Models\Sejarah;
 use App\Models\User;
 use App\Models\Visimisi;
@@ -345,6 +346,10 @@ class DatabaseSeeder extends Seeder
             <p>8. Rumah Makan : Istana Sop Patin. Warung Nasi Sederhana</p>
             '
         ]); 
+
+        Pkk::create([
+            'informasi'=>'Pemberdayaan Kesejahteraan Keluarga, disingkat PKK, adalah organisasi kemasyarakatan yang memberdayakan wanita untuk turut berpartisipasi dalam pembangunan Indonesia.'
+        ]);
 
     }
 }

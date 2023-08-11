@@ -69,6 +69,12 @@ class HomeController extends Controller
         return view('pages.gambaranumum.kondisiekonomi', ['ekonomis' => $ekonomis]);
     }
 
+    public function pkk()
+    {
+        $ekonomis = Ekonomi::all();
+        return view('pages.lembaga.pkk');
+    }
+
     public function pengumuman()
     {
         $pengumumen = Pengumuman::all();

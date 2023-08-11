@@ -148,7 +148,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/tables/simple.html" class="nav-link">
+                                    <a href="/updatepkk" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>PKK</p>
                                     </a>

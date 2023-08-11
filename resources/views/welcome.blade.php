@@ -11,7 +11,7 @@
                         <div class="shape rounded bg-soft-orange rellax d-md-block" data-rellax-speed="0"
                             style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%;"></div>
                         <figure class="rounded"><img class="lazyimage"
-                                data-lazyimg="{{ asset('/storage/images/sindangjawa.jpg') }}" alt="Desa Sindangjawa" />
+                                data-lazyimg="{{ asset('/storage/images/sindangjawa.jpeg') }}" alt="Desa Sindangjawa" />
                         </figure>
                     </div>
                     <!-- wlcme text -->
