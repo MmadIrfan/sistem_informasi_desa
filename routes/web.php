@@ -45,8 +45,8 @@ Route::get('/pemerintahandesa', [HomeController::class,'anggota']);
 Route::get('/galeri', [HomeController::class,'galeri']);
 
 //Auth
-Route::get('/adminsindangjawamaju', [AuthController::class,'login'])->name('login');
-Route::post('/adminsindangjawamaju', [AuthController::class,'authenticated']);
+Route::get('/adminsindangjawamandiri', [AuthController::class,'login'])->name('login');
+Route::post('/adminsindangjawamandiri', [AuthController::class,'authenticated']);
 Route::get('/logout', [AuthController::class,'logout']);
 
 //Dashboard

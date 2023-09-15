@@ -47,7 +47,8 @@
                                 </figcaption>
                             </figure>
                             <div class="post-header">
-                                <h2 class="post-title h3 mb-3"><a class="link-dark" href=""
+                                <h2 class="post-title h3 mb-3"><a class="link-dark"
+                                        href="{{ route('updatepengumuman.show', $pengumuman->id) }}"
                                         style="font-size:1.04rem;">{{ $pengumuman->judul }}</a></h2>
                             </div>
                             <!-- /.post-header -->
